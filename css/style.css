@@ -45,12 +45,21 @@ body {
   top: 40px;
   border-radius: 10px;
   box-shadow: 0 7px 20px rgba(0, 0, 0, 0.151);
+  transition: all 0.3s ease 0s;
+}
+
+.header__area.active {
+    max-width: 100%;
+    position: fixed;
+    border-radius: 0;   
+    top: 0;
 }
 
 .header__area-content {
   display: flex;
   height: 100%;
   width: 90%;
+  max-width: 1200px;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
