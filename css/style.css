@@ -29,6 +29,7 @@ body {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
 
@@ -40,7 +41,8 @@ body {
   height: 80px;
   max-width: 1200px;
   margin: 0 auto;
-  margin-top: 50px;
+  position: absolute;
+  top: 50px;
   border-radius: 10px;
   box-shadow: 0 7px 20px rgba(0, 0, 0, 0.151);
 }
@@ -81,7 +83,7 @@ body {
 .fa-cart-shopping:hover,
 .fa-magnifying-glass:hover {
   color: var(--primary-red);
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .banner__area-content {
@@ -96,7 +98,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 35%;
   margin: 0 auto;
 }
@@ -110,11 +112,31 @@ body {
 }
 
 .banner__area-content-text-description {
-  font-size: 20px;
-  font-weight: 400;
-  color: rgb(126, 125, 125);
+  color: var(--gray);
   font-family: var(--font-roboto);
   margin-top: 20px;
+}
+
+.banner-area-content-btn-carshopping {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.banner-area-content-btn-carshopping span {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: var(--font-poppins);
+  color: var(--secondary-black);
+  margin-left: 10px;
+}
+
+.fa-cart-main {
+    font-size: 40px;
+    margin: 0;
+    margin-right: 6px;
 }
 
 .banner__area-content-image {
