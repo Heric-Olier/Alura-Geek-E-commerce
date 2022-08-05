@@ -43,7 +43,7 @@
 
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- <link rel="stylesheet" href="css/responsive.css" /> -->
   </head>
   <body>
     <!-- start banner Area -->
@@ -51,6 +51,14 @@
       <!-- start Header Area -->
       <header class="header__area">
         <div class="header__area-content">
+          <!-- search bar Area -->
+          <div class="search__bar">
+            <label for="search" class="search__area">
+              <button class="icon-search-hide" type="submit"><i class="fas fa-search "></i></button>
+              <i class="fas fa-times search__close-btn"></i>
+              <input type="text" id="search" placeholder="Buscar Productos" />
+            </label>
+          </div>
           <div class="nav__logo">
             <a href="index.html">
               <img
@@ -82,7 +90,9 @@
             de Microsoft que se lanza en el mercado en el año 2020.
           </p>
           <div class="banner-area-content-btn-carshopping">
-            <i class="fa-solid fa-cart-shopping fa-cart-main"></i>
+            <div class="circle__cartshop">
+              <i class="fa-solid fa-cart-plus"></i>
+            </div>
             <span>Agregar al carrito</span>
           </div>
         </div>
@@ -102,28 +112,29 @@
       </div>
       <div class="features__content">
         <div class="features__content-card">
-          <i class="fa-solid fa-truck-fast"></i>
-          <h3>Envío Rapido</h3>
-          <p>Nuestros envíos son rápidos y seguros.</p>
+          <i class="fa-solid fa-truck-fast icon-card"></i>
+          <h3 class="title-card">Envío Rapido</h3>
+          <p class="description-card">Nuestros envíos son rápidos y seguros.</p>
         </div>
         <div class="features__content-card">
-          <i class="fa-solid fa-credit-card"></i>
-          <h3>Pago Seguro</h3>
-          <p>Pago seguro con tarjeta de crédito.</p>
+          <i class="fa-solid fa-credit-card icon-card"></i>
+          <h3 class="title-card">Pago Seguro</h3>
+          <p class="description-card">Pago seguro con tarjeta de crédito.</p>
         </div>
         <div class="features__content-card">
-          <i class="fa-solid fa-headset"></i>
-          <h3>Soporte 24/7</h3>
-          <p>Soporte 24/7 para atenderte en cualquier momento.</p>
+          <i class="fa-solid fa-headset icon-card"></i>
+          <h3 class="title-card">Soporte 24/7</h3>
+          <p class="description-card">
+            Soporte 24/7 para atenderte en cualquier momento.
+          </p>
         </div>
         <div class="features__content-card">
-            <i class="fa-solid fa-gift"></i>
-            <h3>Regalos</h3>
-            <p>Regalos para tus amigos.</p>
+          <i class="fa-solid fa-gift icon-card"></i>
+          <h3 class="title-card">Regalos</h3>
+          <p class="description-card">Regalos para tus amigos.</p>
         </div>
       </div>
     </section>
-
 
     <script src="js/script.js"></script>
   </body>

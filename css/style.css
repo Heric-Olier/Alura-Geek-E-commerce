@@ -48,11 +48,85 @@ body {
   transition: all 0.3s ease 0s;
 }
 
+.search__bar {
+  width: 50%;
+  height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.151);
+  background-color: var(--primary-red);
+  transition: all 0.3s ease 0s;
+}
+
+.search__bar.active {
+  height: 65%;
+  bottom: -52px;
+}
+
+.search__area {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
+
+.icon-search-hide {
+  position: absolute;
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--background-white);
+  left: 16px;
+  transition: all 0.3s ease 0s;
+}
+
+.icon-search-hide:hover,
+.search__close-btn:hover {
+  color: rgb(243, 183, 183);
+}
+
+#search {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: #e75656;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: var(--background-white);
+  border-radius: 6px;
+  padding: 0 45px;
+  transition: all 0.3s ease 0s;
+}
+
+::placeholder {
+  color: var(--background-white);
+}
+
+.search__close-btn {
+  position: absolute;
+  font-size: 18px;
+  color: var(--background-white);
+  right: 20px;
+  cursor: pointer;
+}
+
 .header__area.active {
-    max-width: 100%;
-    position: fixed;
-    border-radius: 0;   
-    top: 0;
+  max-width: 100%;
+  position: fixed;
+  border-radius: 0;
+  top: 0;
 }
 
 .header__area-content {
@@ -144,10 +218,27 @@ body {
   margin-left: 10px;
 }
 
-.fa-cart-main {
-  font-size: 40px;
-  margin: 0;
+.circle__cartshop {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary-red);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
   margin-right: 6px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.circle__cartshop:hover {
+  background-color: #f76466;
+}
+
+.fa-cart-plus {
+  font-size: 22px;
+  color: var(--background-white);
 }
 
 .banner__area-content-image {
@@ -198,7 +289,18 @@ body {
   border-radius: 10px;
   text-align: center;
   background-color: var(--background-white);
+  transition: all 0.3s ease-in-out;
   box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+}
+
+.features__content-card:hover {
+  background-color: #fc5f57;
+}
+
+.features__content-card:hover .title-card,
+.features__content-card:hover .description-card,
+.features__content-card:hover .icon-card {
+  color: var(--background-white);
 }
 
 .fa-truck-fast,
