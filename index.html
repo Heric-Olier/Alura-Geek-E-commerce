@@ -88,7 +88,8 @@
       </header>
       <!-- end Header Area -->
       <div class="container">
-        <div class="my-slider">
+        <!-- Product # 1 -->
+        <div class="banner__carousel-content">
           <div class="banner__area-content">
             <div class="banner__area-content-text">
               <h1 class="banner__area-content-text-title">Xbox Series S</h1>
@@ -107,11 +108,13 @@
             </div>
             <div class="banner__area-content-image">
               <img
-                src="Assets/images/hero/product-hot-sale-1.png"
+                src="Assets/images/hero/product-hot-sale-1-offer.png"
                 alt="hot sale product 1"
               />
             </div>
           </div>
+
+          <!-- Product # 2 -->
 
           <div class="banner__area-content">
             <div class="banner__area-content-text">
@@ -137,14 +140,17 @@
             </div>
           </div>
 
+          <!-- Product # 3 -->
+
           <div class="banner__area-content">
             <div class="banner__area-content-text">
-              <h1 class="banner__area-content-text-title">Nintendo Switch 2</h1>
+              <h1 class="banner__area-content-text-title">
+                Spider Man Miles Morales
+              </h1>
               <p class="banner__area-content-text-description">
-                Nintendo Switch 2 es una consola de videojuegos de sobremesa de
-                Nintendo que se lanza en el mercado en el año 2019. Todo el
-                catalago de juegos de Nintendo Switch esta disponible en la
-                palma de tu mano.
+                Experimenta el ascenso de Miles Morales y sé testigo de cómo el
+                nuevo héroe domina nuevos poderes increíbles y explosivos para
+                convertirse en su propia versión de Spider-Man.
               </p>
               <div class="banner-area-content-btn-carshopping">
                 <div class="circle__cartshop">
@@ -155,11 +161,37 @@
             </div>
             <div class="banner__area-content-image">
               <img
-                src="Assets/images/hero/product-hot-sale-2.png"
-                alt="hot sale product 2"
+                src="Assets/images/hero/product-hot-sale-4.png"
+                alt="hot sale product 4"
               />
             </div>
           </div>
+
+          <!-- Product # 4 -->
+
+          <div class="banner__area-content">
+            <div class="banner__area-content-text">
+              <h1 class="banner__area-content-text-title">
+                Tostador de pan edición Star Wars
+              </h1>
+              <p class="banner__area-content-text-description">
+                El Tostador de Pan es una herramienta de juego de Star Wars
+                que se lanza en el mercado en el año 2019.
+                Este hermoso tostador imprime el logo de Star Wars en el pan.
+              </p>
+              <div class="banner-area-content-btn-carshopping">
+                <div class="circle__cartshop">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+                <span>Agregar al carrito</span>
+              </div>
+            </div>
+            <div class="banner__area-content-image">
+              <img
+                src="Assets/images/hero/product-hot-sale-5.png"
+                alt="hot sale product 5"
+              />
+            </div>
         </div>
       </div>
     </section>
@@ -199,7 +231,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script>
       var slider = tns({
-        container: ".my-slider",
+        container: ".banner__carousel-content",
         items: 1,
         slideBy: "page",
         autoplay: true,

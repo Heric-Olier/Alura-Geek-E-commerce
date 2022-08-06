@@ -174,7 +174,6 @@ body {
 
 .container {
   display: inline-flex;
-  
   max-width: 1200px;
   margin: 0 auto;
   justify-content: space-between;
@@ -190,12 +189,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 35%;
+  width: 38%;
   margin: 0 auto;
 }
 
 .banner__area-content-text-title {
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 700;
   line-height: 1.1;
   font-family: var(--font-poppins);
@@ -206,7 +205,6 @@ body {
 .banner__area-content-text-description {
   color: var(--gray);
   font-family: var(--font-roboto);
-  margin-top: 20px;
 }
 
 .banner-area-content-btn-carshopping {
@@ -252,7 +250,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 55%;
+  width: 54%;
   margin: 0 auto;
 }
 
@@ -282,7 +280,7 @@ body {
 .features__content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 30px;
+  grid-gap: 5px;
   justify-content: center;
   align-items: center;
   width: 100%;
