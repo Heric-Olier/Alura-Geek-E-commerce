@@ -87,7 +87,7 @@
         </div>
       </header>
       <!-- end Header Area -->
-      <div class="container">
+      <div class="container__carousel-banner">
         <!-- Product # 1 -->
         <div class="banner__carousel-content">
           <div class="banner__area-content">
@@ -201,30 +201,34 @@
       <div class="feature__title">
         <h2>Porque Comprar Con Nosotros</h2>
       </div>
-      <div class="features__content">
-        <div class="features__content-card">
-          <i class="fa-solid fa-truck-fast icon-card"></i>
-          <h3 class="title-card">Envío Rapido</h3>
-          <p class="description-card">Nuestros envíos son rápidos y seguros.</p>
-        </div>
-        <div class="features__content-card">
-          <i class="fa-solid fa-credit-card icon-card"></i>
-          <h3 class="title-card">Pago Seguro</h3>
-          <p class="description-card">Pago seguro con tarjeta de crédito.</p>
-        </div>
-        <div class="features__content-card">
-          <i class="fa-solid fa-headset icon-card"></i>
-          <h3 class="title-card">Soporte 24/7</h3>
-          <p class="description-card">
-            Soporte 24/7 para atenderte en cualquier momento.
-          </p>
-        </div>
-        <div class="features__content-card">
-          <i class="fa-solid fa-gift icon-card"></i>
-          <h3 class="title-card">Regalos</h3>
-          <p class="description-card">Regalos para tus amigos.</p>
-        </div>
-      </div>
+          <div class="features__content">
+            <div class="features__content-card">
+              <i class="fa-solid fa-truck-fast icon-card"></i>
+              <h3 class="title-card">Envío Rapido</h3>
+              <p class="description-card">Nuestros envíos son rápidos y seguros.</p>
+            </div>
+            <div class="features__content-card">
+              <i class="fa-solid fa-credit-card icon-card"></i>
+              <h3 class="title-card">Pago Seguro</h3>
+              <p class="description-card">Pago seguro con tarjeta de crédito.</p>
+            </div>
+            <div class="features__content-card">
+              <i class="fa-solid fa-headset icon-card"></i>
+              <h3 class="title-card">Soporte 24/7</h3>
+              <p class="description-card">
+                Soporte 24/7 para atenderte en cualquier momento.
+              </p>
+            </div>
+            <div class="features__content-card">
+              <i class="fa-solid fa-gift icon-card"></i>
+              <h3 class="title-card">Regalos</h3>
+              <p class="description-card">Regalos para tus amigos.</p>
+            </div>
+          </div>
+
+       
+        
+      
     </section>
     <!-- end features Area -->
     <!-- start New product Area -->
@@ -232,28 +236,37 @@
       <div class="new__products-title">
         <h2>Nuevos Productos</h2>
       </div>
-      <div class="new__products-content">
-        <div class="new__products-content-card">
-          <img src="Assets/images/new-products/new-product-01.png" alt="new product 01"/>
-          <h3 class="new__products-subtitle">Joystick XBox Series X Azul</h3>
-          <h2 class="new__products-price">$120.00</h2>
-        </div>
-        <div class="new__products-content-card">
-          <img src="Assets/images/new-products/new-product-02.png" alt="new product 02"/>
-          <h3 class="new__products-subtitle">Joystick PS5 edición Amarillo</h3>
-          <h2 class="new__products-price">$100.00</h2>
-        </div>
-        <div class="new__products-content-card">
-          <img src="Assets/images/new-products/new-product-03.png" alt="new product 03"/>
-          <h3 class="new__products-subtitle">Figura de coleccion Star Wars Baby Yoda</h3>
-          <h2 class="new__products-price">$50.00</h2>
-        </div>
-        <div class="new__products-content-card">
-          <img src="Assets/images/new-products/new-product-04.png" alt="new product 04"/>
-          <h3 class="new__products-subtitle">Consola Snes Clasic Mini</h3>
-          <h2 class="new__products-price">$300.00</h2>
-        </div>
+      <div class="container__carousel-new-products">
+        <div class="new-products__carousel-content">
+          
+            <div class="new__products-content-card">
+              <img src="Assets/images/new-products/new-product-01.png" alt="new product 01"/>
+              <h3 class="new__products-subtitle">Joystick XBox Series X Azul</h3>
+              <h2 class="new__products-price">$120.00</h2>
+            </div>
+            <div class="new__products-content-card">
+              <img src="Assets/images/new-products/new-product-02.png" alt="new product 02"/>
+              <h3 class="new__products-subtitle">Joystick PS5 edición Amarillo</h3>
+              <h2 class="new__products-price">$100.00</h2>
+            </div>
+            <div class="new__products-content-card">
+              <img src="Assets/images/new-products/new-product-03.png" alt="new product 03"/>
+              <h3 class="new__products-subtitle">Figura de coleccion Star Wars Baby Yoda</h3>
+              <h2 class="new__products-price">$50.00</h2>
+            </div>
+            <div class="new__products-content-card">
+              <img src="Assets/images/new-products/new-product-04.png" alt="new product 04"/>
+              <h3 class="new__products-subtitle">Consola Snes Clasic Mini</h3>
+              <h2 class="new__products-price">$300.00</h2>
+            </div>
+            <div class="new__products-content-card">
+              <img src="Assets/images/new-products/new-product-05.png" alt="new product 05"/>
+              <h3 class="new__products-subtitle">Consola Xbox Series X Negra</h3>
+              <h2 class="new__products-price">$600.00</h2>
+            </div>
+        
 
+          </div>
 
       </div>
     </section>
@@ -288,6 +301,24 @@
         loop: true,
         mouseDrag: true,
       });
+
+      var slider2 = tns({
+        container: ".new-products__carousel-content",
+        items: 4,
+        slideBy: 1,
+        autoplay: true,
+        controls: false,
+        nav: false,
+        autoplayButtonOutput: false,
+        autoplayTimeout: 5000,
+        autoplayButton: false,
+        loop: true,
+        mouseDrag: true,
+        
+     
+      
+      });
+      
     </script>
   </body>
 </html>
