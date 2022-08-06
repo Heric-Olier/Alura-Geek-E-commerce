@@ -43,6 +43,10 @@
 
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
     <!-- <link rel="stylesheet" href="css/responsive.css" /> -->
   </head>
   <body>
@@ -54,7 +58,9 @@
           <!-- search bar Area -->
           <div class="search__bar">
             <label for="search" class="search__area">
-              <button class="icon-search-hide" type="submit"><i class="fas fa-search "></i></button>
+              <button class="icon-search-hide" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
               <i class="fas fa-times search__close-btn"></i>
               <input type="text" id="search" placeholder="Buscar Productos" />
             </label>
@@ -81,26 +87,79 @@
         </div>
       </header>
       <!-- end Header Area -->
-      <div class="banner__area-content">
-        <div class="banner__area-content-text">
-          <h1 class="banner__area-content-text-title">Xbox Series S</h1>
-          <p class="banner__area-content-text-description">
-            Rendimiento de nueva generación en la Xbox más pequeña de la
-            historia. Xbox Series S es una consola de videojuegos de sobremesa
-            de Microsoft que se lanza en el mercado en el año 2020.
-          </p>
-          <div class="banner-area-content-btn-carshopping">
-            <div class="circle__cartshop">
-              <i class="fa-solid fa-cart-plus"></i>
+      <div class="container">
+        <div class="my-slider">
+          <div class="banner__area-content">
+            <div class="banner__area-content-text">
+              <h1 class="banner__area-content-text-title">Xbox Series S</h1>
+              <p class="banner__area-content-text-description">
+                Rendimiento de nueva generación en la Xbox más pequeña de la
+                historia. Xbox Series S es una consola de videojuegos de
+                sobremesa de Microsoft que se lanza en el mercado en el año
+                2020.
+              </p>
+              <div class="banner-area-content-btn-carshopping">
+                <div class="circle__cartshop">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+                <span>Agregar al carrito</span>
+              </div>
             </div>
-            <span>Agregar al carrito</span>
+            <div class="banner__area-content-image">
+              <img
+                src="Assets/images/hero/product-hot-sale-1.png"
+                alt="hot sale product 1"
+              />
+            </div>
           </div>
-        </div>
-        <div class="banner__area-content-image">
-          <img
-            src="Assets/images/hero/product-hot-sale-1.png"
-            alt="hot sale product 1"
-          />
+
+          <div class="banner__area-content">
+            <div class="banner__area-content-text">
+              <h1 class="banner__area-content-text-title">Nintendo Switch</h1>
+              <p class="banner__area-content-text-description">
+                Nintendo Switch es una consola de videojuegos de sobremesa de
+                Nintendo que se lanza en el mercado en el año 2019. Todo el
+                catalago de juegos de Nintendo Switch esta disponible en la
+                palma de tu mano.
+              </p>
+              <div class="banner-area-content-btn-carshopping">
+                <div class="circle__cartshop">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+                <span>Agregar al carrito</span>
+              </div>
+            </div>
+            <div class="banner__area-content-image">
+              <img
+                src="Assets/images/hero/product-hot-sale-3.png"
+                alt="hot sale product 2"
+              />
+            </div>
+          </div>
+
+          <div class="banner__area-content">
+            <div class="banner__area-content-text">
+              <h1 class="banner__area-content-text-title">Nintendo Switch 2</h1>
+              <p class="banner__area-content-text-description">
+                Nintendo Switch 2 es una consola de videojuegos de sobremesa de
+                Nintendo que se lanza en el mercado en el año 2019. Todo el
+                catalago de juegos de Nintendo Switch esta disponible en la
+                palma de tu mano.
+              </p>
+              <div class="banner-area-content-btn-carshopping">
+                <div class="circle__cartshop">
+                  <i class="fa-solid fa-cart-plus"></i>
+                </div>
+                <span>Agregar al carrito</span>
+              </div>
+            </div>
+            <div class="banner__area-content-image">
+              <img
+                src="Assets/images/hero/product-hot-sale-2.png"
+                alt="hot sale product 2"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -137,5 +196,21 @@
     </section>
 
     <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script>
+      var slider = tns({
+        container: ".my-slider",
+        items: 1,
+        slideBy: "page",
+        autoplay: true,
+        controls: false,
+        nav: false,
+        autoplayButtonOutput: false,
+        autoplayTimeout: 5000,
+        autoplayButton: false,
+        loop: true,
+        mouseDrag: true,
+      });
+    </script>
   </body>
 </html>

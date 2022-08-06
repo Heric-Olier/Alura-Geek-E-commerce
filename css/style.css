@@ -41,6 +41,7 @@ body {
   height: 80px;
   max-width: 1200px;
   margin: 0 auto;
+  z-index: 1;
   position: absolute;
   top: 40px;
   border-radius: 10px;
@@ -171,12 +172,17 @@ body {
   /* text-decoration: underline; */
 }
 
-.banner__area-content {
-  display: flex;
+.container {
+  display: inline-flex;
+  
   max-width: 1200px;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
+}
+
+.banner__area-content {
+  display: inline-flex !important;
 }
 
 .banner__area-content-text {
@@ -191,6 +197,7 @@ body {
 .banner__area-content-text-title {
   font-size: 60px;
   font-weight: 700;
+  line-height: 1.1;
   font-family: var(--font-poppins);
   color: var(--secondary-black);
   margin-bottom: 20px;
@@ -286,6 +293,7 @@ body {
 .features__content-card {
   height: 160px;
   padding: 20px;
+  margin: 0 20px;
   border-radius: 10px;
   text-align: center;
   background-color: var(--background-white);

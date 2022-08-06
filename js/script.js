@@ -33,3 +33,5 @@ searchBarClose.addEventListener("click", () => {
   searchBarInput.value = "";
 
 });
+
+
