@@ -25,7 +25,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 216px 45px;
   position: relative;
   display: flex;
   align-items: center;
