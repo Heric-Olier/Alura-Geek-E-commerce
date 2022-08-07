@@ -173,14 +173,24 @@ body {
 }
 
 .container__carousel-banner {
-  display: inline-flex;
+  display: flex;
   max-width: 1200px;
-  margin: 0 auto;
   align-items: center;
+  justify-content: center;
+}
+
+.banner__carousel-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .banner__area-content {
   display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .banner__area-content-text {
@@ -189,7 +199,6 @@ body {
   justify-content: center;
   align-items: flex-start;
   width: 38%;
-  margin: 0 auto;
 }
 
 .banner__area-content-text-title {
@@ -247,23 +256,21 @@ body {
 
 .banner__area-content-image {
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   width: 54%;
-  margin: 0 auto;
 }
 
 .banner__area-content-image img {
-  width: 100%;
+  width: 97%;
   height: 100%;
 }
 
 /*! <--------- Features Section --------->*/
 
 .features {
-  padding: 100px 0;
+  padding: 40px 0;
   width: 100%;
-  background-color: #dfdfdf;
   margin: 0 auto;
 }
 
@@ -288,12 +295,13 @@ body {
 }
 
 .features__content-card {
-  height: 160px;
-  padding: 20px;
+  height: 150px;
+  padding: 26px;
   margin: 0 20px;
   border-radius: 10px;
   text-align: center;
   background-color: var(--background-white);
+  border: 1px solid rgba(221, 221, 221, 0.568);
   transition: all 0.3s ease-in-out;
   box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
 }
@@ -322,7 +330,7 @@ body {
   font-weight: 600;
   font-family: var(--font-poppins);
   color: var(--secondary-black);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .features__content p {
@@ -337,32 +345,48 @@ body {
 /*! <--------- New Products Section --------->*/
 
 .new__products {
-  padding: 100px 0;
+  padding: 40px 0;
   width: 100%;
   background-color: var(--background-white);
   margin: 0 auto;
 }
 
 .new__products-title {
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 32px;
+  max-width: 1200px;
+  position: relative;
+}
+
+.new__products-title h2 {
   font-size: 28px;
   font-weight: 600;
-  max-width: 1200px;
-  margin: 0 auto;
   font-family: var(--font-poppins);
   color: var(--secondary-black);
-  margin-bottom: 32px;
+}
+
+.new__products-title span {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: var(--font-poppins);
+  color: var(--primary-red);
+  position: absolute;
+  right: 0;
+  cursor: pointer;
 }
 
 .container__carousel-new-products {
   max-width: 1200px;
   margin: 0 auto;
-
 }
 
 .new-products__carousel-content {
   display: flex;
   height: 24rem;
   margin: 0 auto;
+  margin-bottom: 80px;
 }
 
 .new__products-content {
@@ -372,6 +396,7 @@ body {
   width: 100%;
   margin: 0 auto;
   max-width: 1200px;
+  overflow: hidden;
 }
 
 .new__products-content-card {
@@ -380,20 +405,75 @@ body {
   border-radius: 8px;
   text-align: center;
   background-color: var(--background-white);
-  transition: all 0.3s ease-in-out;
-  border: 1px solid rgba(119, 119, 119, 0.178);
+  transition: all 0.2s;
   box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
   border: 2px solid rgba(56, 56, 56, 0.13);
+  position: relative;
   cursor: pointer;
 }
 
 .new__products-content-card:hover {
+  border-radius: 8px 8px 0 0;
   border: 2px solid var(--gray);
   box-shadow: 0 10px 20px rgba(27, 27, 27, 0.267);
 }
 
+.card__hide-content {
+  background-color: var(--secondary-black);
+  width: 100%;
+  height: 0;
+  position: absolute;
+  left: 0;
+  top: 23.8rem;
+  padding: 14px;
+  text-align: center;
+  border-radius: 8px;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.card__hide-content button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.card__hide-content button:hover {
+  transform: scale(1.12);
+}
+
+.card__hide-content button:hover .cart-products {
+  color: rgb(243, 183, 183);
+}
+
+.cart-products {
+  color: var(--primary-red);
+  transition: all 0.2s;
+}
+
+.card__hide-content span {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: var(--font-poppins);
+  color: var(--background-white);
+  margin-left: 10px;
+}
+
+.new__products-content-card:hover .card__hide-content {
+  border-radius: 0 0 8px 8px;
+  opacity: 1;
+  height: 60px;
+}
+
+.new__products-content-card:hover img {
+  transform: scale(1.1);
+}
+
 .new__products-content-card img {
   width: 100%;
+  transition: all 0.3s ease-in-out;
 }
 
 .new__products-subtitle {
@@ -410,4 +490,107 @@ body {
   font-family: var(--font-poppins);
   color: var(--primary-red);
   margin-bottom: 10px;
+}
+
+/*! <--------- Hot Deal Section --------->*/
+
+.hot__deal {
+  display: flex;
+  width: 100%;
+  height: 465px;
+  padding: 60px 0;
+  background-image: url(../Assets/images/hot-deal/hotdeal-banner.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.hot__deal-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hot__deal-text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.text__content-countdown,
+.text__content-countdown li {
+  list-style: none;
+}
+
+.text__content-countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.text__content-countdown li {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+  margin: 0 10px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: var(--primary-red);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.text__content-countdown li span {
+  font-size: 30px;
+  font-weight: 600;
+  font-family: var(--font-poppins);
+  color: var(--background-white);
+  margin-bottom: 6px;
+}
+
+.text__content-countdown li h3 {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--font-poppins);
+  color: var(--secondary-black);
+  margin-bottom: 10px;
+}
+
+.hot__deal-text-content h2 {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: var(--font-poppins);
+  color: var(--secondary-black);
+  margin-bottom: 20px;
+}
+
+.hot__deal-text-content h3 {
+  font-size: 24px;
+  font-weight: 500;
+  font-family: var(--font-poppins);
+  color: var(--secondary-black);
+}
+
+/*! <--------- Products Section --------->*/
+
+.products {
+  padding: 100px 0;
+  width: 100%;
+  background-color: var(--background-white);
+  margin: 0 auto;
 }
