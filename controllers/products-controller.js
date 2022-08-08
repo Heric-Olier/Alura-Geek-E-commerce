@@ -1,38 +1,49 @@
-import { clientServices } from "./client-services.js";
 
-const newProducts = document.querySelector("[data-new-products]");
+
+const newProducts = document.querySelector(
+  ".container__carousel-products-template"
+);
+const cardTemplate = document.querySelector("#card__template").content;
 console.log(newProducts);
 
 //creamos una funcion para traer los datos de los articulos desde la api json
 
-const newProductsList = (name, price, imageUrl) => {
-  const cardProduct = document.createElement("div");
-  const content = `
-  <div>
-  <img src="${imageUrl}" alt="new product 01"/>
-  <h3 class="products__template-subtitle">${name}</h3>
-  <h2 class="products__template-price">${price}</h2>
-  <div class="card__hide-content">
-    <button><i class="fa-solid fa-cart-plus cart-products"></i><span>Agregar al carrito</span></button>
-  </div>
-</div>
-  `;
-  cardProduct.innerHTML = content;
-  cardProduct.classList.add("products__template-content-card");
-  return cardProduct;
-};
-
-
 const showProducts = async () => {
   try {
-    const productsList = await clientServices.productsList();
-    productsList.forEach((product) => {
-      newProducts.appendChild(
-        newProductsList(product.name, product.price, product.imageUrl)
-      );
+    const response = await fetch(
+      "https://alura-geek-fake-appi-server.herokuapp.com/products"
+    );
+    const products = await response.json();
+
+    const fragment = document.createDocumentFragment();
+    const div = document.createElement("div");
+    div.classList.add("new-products__carousel-content");
+
+    products.forEach(({ name, price, imageUrl }) => {
+      const card = cardTemplate.cloneNode(true);
+      card.querySelector(".products__template-subtitle").textContent = name;
+      card.querySelector(".products__template-price").textContent = price;
+      card.querySelector("img").src = imageUrl;
+      fragment.appendChild(card);
     });
+    div.appendChild(fragment);
+    newProducts.appendChild(div);
   } catch (error) {
     console.log(error);
+  } finally {
+    tns({
+      container: ".new-products__carousel-content",
+      items: 4,
+      slideBy: 1,
+      autoplay: true,
+      controls: false,
+      nav: false,
+      autoplayButtonOutput: false,
+      autoplayTimeout: 5000,
+      autoplayButton: false,
+      loop: true,
+      mouseDrag: true,
+    });
   }
 };
 

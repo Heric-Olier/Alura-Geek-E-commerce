@@ -261,57 +261,11 @@
         <span>Ver todos</span>
       </div>
       <div class="container__carousel-products-template">
-        <div class="new-products__carousel-content">
+        <!-- <div class="new-products__carousel-content">
           
-            <div class="products__template-content-card" data-new-products>
-              <!-- <img src="Assets/images/new-products/new-product-01.png" alt="new product 01"/>
-              <h3 class="products__template-subtitle">Joystick XBox Series X Azul</h3>
-              <h2 class="products__template-price">$60.00</h2>
-              <div class="card__hide-content">
-                <button><i class="fa-solid fa-cart-plus cart-products"></i><span>Agregar al carrito</span></button>
-              </div> -->
-            </div>
-            <div class="products__template-content-card" data-new-products>
-              <!-- <img src="Assets/images/new-products/new-product-03.png" alt="new product 03"/>
-              <h3 class="products__template-subtitle">Figura de coleccion Star Wars Baby Yoda</h3>
-              <h2 class="products__template-price">$50.00</h2>
-              <div class="card__hide-content">
-                <button><i class="fa-solid fa-cart-plus cart-products"></i><span>Agregar al carrito</span></button>
-              </div> -->
-            </div>
-            <div class="products__template-content-card" data-new-products>
-              <!-- <img src="Assets/images/new-products/new-product-04.png" alt="new product 04"/>
-              <h3 class="products__template-subtitle">Consola Snes Clasic Mini</h3>
-              <h2 class="products__template-price">$300.00</h2>
-              <div class="card__hide-content">
-                <button><i class="fa-solid fa-cart-plus cart-products"></i><span>Agregar al carrito</span></button>
-              </div> -->
-            </div>
-            <div class="products__template-content-card" data-new-products>
-              <!-- <img src="Assets/images/new-products/new-product-02.png" alt="new product 02"/>
-              <h3 class="products__template-subtitle">Joystick PS5 edición Amarillo</h3>
-              <h2 class="products__template-price">$100.00</h2>
-              <div class="card__hide-content">
-                <button><i class="fa-solid fa-cart-plus cart-products"></i><span>Agregar al carrito</span></button>
-              </div> -->
-            </div>
-            <div class="products__template-content-card" data-new-products>
-              <!-- <img src="Assets/images/new-products/new-product-05.png" alt="new product 05"/>
-              <h3 class="products__template-subtitle">Consola Xbox Series X Negra</h3>
-              <h2 class="products__template-price">$600.00</h2>
-              <div class="card__hide-content">
-                <button><i class="fa-solid fa-cart-plus cart-products"></i><span>Agregar al carrito</span></button>
-              </div> -->
-            </div>
-            <div class="products__template-content-card" data-new-products>
-              <!-- <img src="Assets/images/new-products/new-product-06.png" alt="new product 06"/>
-              <h3 class="products__template-subtitle">Consola Steam Deck Negra</h3>
-              <h2 class="products__template-price">$1000.00</h2>
-              <div class="card__hide-content">
-                <button><i class="fa-solid fa-cart-plus cart-products"></i><span>Agregar al carrito</span></button>
-              </div> -->
-            </div>
-          </div>
+        </div> -->
+      
+
       </div>
     </section>
     <!-- end New product Area -->
@@ -406,7 +360,16 @@
     </section>
 
 
-
+    <template id="card__template">
+      <div class="products__template-content-card">
+        <img src="Assets/images/products/consolas/consolas-product-01.png" alt="consolas product 01"/>
+        <h3 class="products__template-subtitle">Consola Nintendo Switch</h3>
+        <h2 class="products__template-price">$600.00</h2>
+        <div class="card__hide-content">
+          <button><i class="fa-solid fa-cart-plus cart-products"></i><span>Agregar al carrito</span></button>
+        </div>
+      </div>
+    </template>
 
 
 
@@ -427,20 +390,6 @@
         container: ".banner__carousel-content",
         items: 1,
         slideBy: "page",
-        autoplay: true,
-        controls: false,
-        nav: false,
-        autoplayButtonOutput: false,
-        autoplayTimeout: 5000,
-        autoplayButton: false,
-        loop: true,
-        mouseDrag: true,
-      });
-
-      var slider2 = tns({
-        container: ".new-products__carousel-content",
-        items: 4,
-        slideBy: 1,
         autoplay: true,
         controls: false,
         nav: false,
