@@ -1,6 +1,4 @@
-const consolesProducts = document.querySelector(
-  ".container__carousel-products-template-consoles"
-); //template de los productos de consolas
+const consolesProducts = document.querySelector(".container__carousel-products-template-consoles"); //template de los productos de consolas
 const cardTemplate = document.querySelector("#card__template").content;
 
 async function getTypeProducts(typeProduct) {

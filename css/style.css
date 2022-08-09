@@ -379,7 +379,8 @@ body {
 .new__products-title,
 .products-title,
 .joysticks-title,
-.sounds-title {
+.sounds-title, 
+.various-title {
   display: flex;
   margin: 0 auto;
   margin-bottom: 32px;
@@ -390,7 +391,8 @@ body {
 .new__products-title h2,
 .products-title h2,
 .joysticks-title h2,
-.sounds-title h2 {
+.sounds-title h2,
+.various-title h2 {
   font-size: 28px;
   font-weight: 600;
   font-family: var(--font-poppins);
@@ -400,7 +402,8 @@ body {
 .new__products-title span,
 .products-title span,
 .joysticks-title span,
-.sounds-title span {
+.sounds-title span,
+.various-title span {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
@@ -414,7 +417,8 @@ body {
 .container__carousel-products-template,
 .container__carousel-products-template-consoles,
 .container__carousel-products-template-joysticks,
-.container__carousel-products-template-sounds {
+.container__carousel-products-template-sounds,
+.container__carousel-products-template-various {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -422,7 +426,8 @@ body {
 .new-products__carousel-content,
 .consoles-products__carousel-content,
 .joysticks-products__carousel-content,
-.sounds-products__carousel-content {
+.sounds-products__carousel-content,
+.various-products__carousel-content {
   display: flex;
   height: 24rem;
   margin: 0 auto;
@@ -632,7 +637,8 @@ body {
 
 .products,
 .joysticks,
-.sounds {
+.sounds,
+.various {
   padding: 20px 0;
   width: 100%;
   background-color: var(--background-white);
