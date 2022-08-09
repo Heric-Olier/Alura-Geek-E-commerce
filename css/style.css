@@ -402,13 +402,12 @@ body {
 }
 
 .container__carousel-products-template,
-.new-container__carousel-products-template {
+.container__carousel-products-template-consoles {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.new-products__carousel-content,
-.products__carousel-content {
+.new-products__carousel-content {
   display: flex;
   height: 24rem;
   margin: 0 auto;

@@ -261,11 +261,18 @@
         <span>Ver todos</span>
       </div>
       <div class="container__carousel-products-template">
-        <!-- <div class="new-products__carousel-content">
-          
-        </div> -->
-      
-
+       
+        <template id="card__template">
+          <div class="products__template-content-card">
+            <img src="Assets/images/products/consolas/consolas-product-01.png" alt="consolas product 01"/>
+            <h3 class="products__template-subtitle">Consola Nintendo Switch</h3>
+            <h2 class="products__template-price">$600.00</h2>
+            <div class="card__hide-content">
+              <button><i class="fa-solid fa-cart-plus cart-products"></i><span>Agregar al carrito</span></button>
+            </div>
+          </div>
+        </template>
+        
       </div>
     </section>
     <!-- end New product Area -->
@@ -304,72 +311,21 @@
         <h2>Consolas</h2>
         <span>Ver todos</span>
       </div>
-      <div class="container__carousel-products-template">
-        <div class="products__carousel-content">
-          
-            <div class="products__template-content-card">
-              <img src="Assets/images/products/consolas/consolas-product-01.png" alt="consolas product 01"/>
-              <h3 class="products__template-subtitle">Consola Nintendo Switch</h3>
-              <h2 class="products__template-price">$600.00</h2>
-              <div class="card__hide-content">
-                <button><i class="fa-solid fa-cart-plus cart-products"></i><span>Agregar al carrito</span></button>
-              </div>
-            </div>
-            <div class="products__template-content-card">
-              <img src="Assets/images/products/consolas/consolas-product-02.png" alt="product 02"/>
-              <h3 class="products__template-subtitle">Consola Xbox Series S Blanco</h3>
-              <h2 class="products__template-price">$700.00</h2>
-              <div class="card__hide-content">
-                <button><i class="fa-solid fa-cart-plus cart-products"></i><span>Agregar al carrito</span></button>
-              </div>
-            </div>
-            <div class="products__template-content-card">
-              <img src="Assets/images/new-products/new-product-04.png" alt="new product 04"/>
-              <h3 class="products__template-subtitle">Consola Snes Clasic Mini</h3>
-              <h2 class="products__template-price">$300.00</h2>
-              <div class="card__hide-content">
-                <button><i class="fa-solid fa-cart-plus cart-products"></i><span>Agregar al carrito</span></button>
-              </div>
-            </div>
-            <div class="products__template-content-card">
-              <img src="Assets/images/products/consolas/consolas-product-03.png" alt="new product 03"/>
-              <h3 class="products__template-subtitle">Consola Sony PS4 Negro</h3>
-              <h2 class="products__template-price">$300.00</h2>
-              <div class="card__hide-content">
-                <button><i class="fa-solid fa-cart-plus cart-products"></i><span>Agregar al carrito</span></button>
-              </div>
-            </div>
-            <div class="products__template-content-card">
-              <img src="Assets/images/new-products/new-product-05.png" alt="new product 05"/>
-              <h3 class="products__template-subtitle">Consola Xbox Series X Negro</h3>
-              <h2 class="products__template-price">$600.00</h2>
-              <div class="card__hide-content">
-                <button><i class="fa-solid fa-cart-plus cart-products"></i><span>Agregar al carrito</span></button>
-              </div>
-            </div>
-            <div class="products__template-content-card">
-              <img src="Assets/images/new-products/new-product-06.png" alt="new product 06"/>
-              <h3 class="products__template-subtitle">Consola Steam Deck Negra</h3>
-              <h2 class="products__template-price">$1000.00</h2>
-              <div class="card__hide-content">
-                <button><i class="fa-solid fa-cart-plus cart-products"></i><span>Agregar al carrito</span></button>
-              </div>
+      <div class="container__carousel-products-template-consoles">
+
+        <template id="card__template">
+          <div class="products__template-content-card">
+            <img src="Assets/images/products/consolas/consolas-product-01.png" alt="consolas product 01"/>
+            <h3 class="products__template-subtitle">Consola Nintendo Switch</h3>
+            <h2 class="products__template-price">$600.00</h2>
+            <div class="card__hide-content">
+              <button><i class="fa-solid fa-cart-plus cart-products"></i><span>Agregar al carrito</span></button>
             </div>
           </div>
+        </template>
       </div>
     </section>
 
-
-    <template id="card__template">
-      <div class="products__template-content-card">
-        <img src="Assets/images/products/consolas/consolas-product-01.png" alt="consolas product 01"/>
-        <h3 class="products__template-subtitle">Consola Nintendo Switch</h3>
-        <h2 class="products__template-price">$600.00</h2>
-        <div class="card__hide-content">
-          <button><i class="fa-solid fa-cart-plus cart-products"></i><span>Agregar al carrito</span></button>
-        </div>
-      </div>
-    </template>
 
 
 
@@ -400,21 +356,21 @@
         mouseDrag: true,
       });
 
-      var slider3 = tns({
-        container: ".products__carousel-content",
-        items: 4,
-        slideBy: 1,
-        autoplay: true,
-        controls: false,
-        nav: false,
-        autoplayButtonOutput: false,
-        autoplayTimeout: 5000,
-        autoplayButton: false,
-        loop: true,
-        mouseDrag: true,
-        // controls: true,
+      // var slider3 = tns({
+      //   container: ".products__carousel-content",
+      //   items: 4,
+      //   slideBy: 1,
+      //   autoplay: true,
+      //   controls: false,
+      //   nav: false,
+      //   autoplayButtonOutput: false,
+      //   autoplayTimeout: 5000,
+      //   autoplayButton: false,
+      //   loop: true,
+      //   mouseDrag: true,
+      //   // controls: true,
        
-      });
+      // });
       
     </script>
   </body>
