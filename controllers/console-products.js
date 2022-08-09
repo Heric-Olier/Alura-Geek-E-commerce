@@ -21,13 +21,13 @@ const consolesCarousel = () => {
     items: 4,
     slideBy: 1,
     autoplay: true,
-    controls: false,
     nav: false,
     autoplayButtonOutput: false,
     autoplayTimeout: 5000,
     autoplayButton: false,
     loop: true,
     mouseDrag: true,
+    controls: false
   });
 };
 
