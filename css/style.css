@@ -413,7 +413,9 @@ body {
   margin: 0 auto;
 }
 
-.new-products__carousel-content {
+.new-products__carousel-content,
+.consoles-products__carousel-content,
+.joysticks-products__carousel-content {
   display: flex;
   height: 24rem;
   margin: 0 auto;
