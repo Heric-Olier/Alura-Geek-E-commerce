@@ -31,16 +31,17 @@ async function getTypeProducts(typeProduct) {
 }
 
 
+
 // creamos una funcion para moostrar los productos nuevos
 
 async function showProducts() {
   try {
     const products = await getTypeProducts("NewProduct");
-
+    
     const fragment = document.createDocumentFragment();
     const div = document.createElement("div");
     div.classList.add("new-products__carousel-content");
-
+    
     products.forEach(({ name, price, imageUrl }) => {
       const card = cardTemplate.cloneNode(true);
       card.querySelector(".products__template-subtitle").textContent = name;
@@ -48,7 +49,7 @@ async function showProducts() {
       card.querySelector("img").src = imageUrl;
       fragment.appendChild(card);
     });
-
+    
     div.appendChild(fragment);
     newProducts.appendChild(div);
   } catch (error) {
