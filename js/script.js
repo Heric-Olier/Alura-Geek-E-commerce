@@ -37,20 +37,3 @@ searchBarClose.addEventListener("click", () => {
 
 //*!--------------- Tiny Carousel ---------------*//
 
-function tinyCarousel() {
-  tns({
-      container: ".new-products__carousel-content",
-      items: 4,
-      slideBy: 1,
-      autoplay: true,
-      controls: false,
-      nav: false,
-      autoplayButtonOutput: false,
-      autoplayTimeout: 5000,
-      autoplayButton: false,
-      loop: true,
-      mouseDrag: true,
-    });
-}
-
-export { tinyCarousel, };

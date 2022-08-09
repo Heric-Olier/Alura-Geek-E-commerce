@@ -174,7 +174,8 @@ body {
 
 .nav__menu ul li a:after,
 .new__products-title span:after,
-.products-title span:after {
+.products-title span:after,
+.joysticks-title span:after {
   background: none repeat scroll 0 0 transparent;
   bottom: -3px;
   content: "";
@@ -188,7 +189,8 @@ body {
 }
 .nav__menu ul li a:hover:after,
 .new__products-title span:hover:after,
-.products-title span:hover:after {
+.products-title span:hover:after,
+.joysticks-title span:hover:after {
   width: 100%;
   left: 0;
 }
@@ -373,7 +375,8 @@ body {
 }
 
 .new__products-title,
-.products-title {
+.products-title,
+.joysticks-title {
   display: flex;
   margin: 0 auto;
   margin-bottom: 32px;
@@ -382,7 +385,8 @@ body {
 }
 
 .new__products-title h2,
-.products-title h2 {
+.products-title h2,
+.joysticks-title h2 {
   font-size: 28px;
   font-weight: 600;
   font-family: var(--font-poppins);
@@ -390,7 +394,8 @@ body {
 }
 
 .new__products-title span,
-.products-title span {
+.products-title span,
+.joysticks-title span {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
@@ -402,7 +407,8 @@ body {
 }
 
 .container__carousel-products-template,
-.container__carousel-products-template-consoles {
+.container__carousel-products-template-consoles,
+.container__carousel-products-template-joysticks {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -622,13 +628,14 @@ body {
 
 /*! <--------- Products Section --------->*/
 
-.products {
-  padding: 100px 0;
+.products,
+.joysticks{
+  padding: 40px 0;
   width: 100%;
   background-color: var(--background-white);
   margin: 0 auto;
 }
 
-/* .tns-outer [aria-controls] {
-  background-color: var(--primary-red);
-} */
+/*! <--------- Joysticks Section --------->*/
+
+
