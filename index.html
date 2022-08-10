@@ -76,7 +76,7 @@
           <div class="nav__menu">
             <ul>
               <li><a href="#">Inicio</a></li>
-              <li><a href="#">Nosotros</a></li>
+              <li><a href="#footer">Nosotros</a></li>
               <li><a href="#">Productos</a></li>
               <li><a href="#">Contacto</a></li>
               <i class="fa-solid fa-cart-shopping"></i>
@@ -87,6 +87,50 @@
         </div>
       </header>
       <!-- end Header Area -->
+
+      <!-- start Login Area -->
+      <div class="login__area">
+        <div class="login__area-content">
+          <i class="fa-solid fa-xmark"></i>
+          <div class="login__area-content-logo">
+            <a href="index.html">
+              <img
+                src="Assets/images/hero/logo-Alura-Geek-login.svg"
+                alt="Alura Geek"
+              />
+            </a>
+          </div>
+          <div class="login__area-content-title">
+            <h2>Iniciar Sesión</h2>
+          </div>
+          <div class="login__area-content-form">
+            <form action="">
+              <div class="form__group">
+                <label for="email" class="form__label">
+                  <!-- <i class="fa-solid fa-envelope"></i> -->
+                </label>
+                <input type="email" id="email" placeholder="Email" />
+              </div>
+              <div class="form__group">
+                <label for="password" class="form__label">
+                  <!-- <i class="fa-solid fa-lock"></i> -->
+                </label>
+                <input type="password" id="password" placeholder="Contraseña" />
+              </div>
+              <div class="form__group">
+                <button class="form__btn" type="submit">
+                  <!-- <i class="fa-solid fa-sign-in-alt"></i> -->
+                  <span>Iniciar Sesión</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="canvas__overlay-blur"></div>
+      <!-- end Login Area -->
+
+      <!-- start banner slider Area -->
       <div class="container__carousel-banner">
         <!-- Product # 1 -->
         <div class="banner__carousel-content">
@@ -220,6 +264,8 @@
             />
           </div>
       </div>
+    </div>
+    <!-- end banner slider Area -->
     </section>
     <!-- end banner Area -->
     <!-- start features Area -->
@@ -360,7 +406,7 @@
     <!-- end various Area -->
 
     <!-- start footer Area -->
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="footer__content">
         <div class="footer__content-about">
           <h2>Sobre Nosotros</h2>
@@ -459,6 +505,7 @@
     <script src="controllers/console-products.js"></script> 
     <script src="controllers/sounds-products.js"></script> 
     <script src="controllers/various-products.js"></script>
+    <script src="js/login.js"></script>
     <script src="js/script.js"></script>
     <script>
       var slider = tns({
