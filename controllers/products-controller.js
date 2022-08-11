@@ -31,6 +31,7 @@ async function getTypeProducts(typeProduct) {
   }
 }
 
+
 const newProductsCarousel = () => {
   tns({
     container: ".new-products__carousel-content",
@@ -75,3 +76,4 @@ async function showProducts() {
 }
 
 showProducts();
+

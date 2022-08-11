@@ -91,7 +91,9 @@
       <!-- start Login Area -->
       <div class="login__area">
         <div class="login__area-content">
-          <i class="fa-solid fa-xmark"></i>
+          <div class="product__login-btn-close">
+            <i class="fa-solid fa-xmark login-btn-icon"></i>
+          </div>
           <div class="login__area-content-logo">
             <a href="index.html">
               <img
@@ -129,6 +131,42 @@
       </div>
       <div class="canvas__overlay-blur"></div>
       <!-- end Login Area -->
+
+      <!-- start Product description Area -->
+      <div class="product__description">
+        <div class="product__description-btn-close">
+          <i class="fa-solid fa-xmark description-btn-icon"></i>
+        </div>
+        <div class="product__description-content">
+          <div class="product__description-content-image">
+            <img src="https://i.imgur.com/kUrt3fl.png" alt="description image">
+          </div>
+          <hr>
+          <div class="product__description-content-title">
+            <h2>Joystick XBox Series X Azul</h2>
+          </div>
+          <div class="product__description-content-price">
+            <h3>$60.00</h3>
+          </div>
+          <div class="product__description-content-description">
+            <h2>Descripción</h2>
+            <p>
+              Este mando de Xbox Series combina funciones revolucionarias mientras conserva precisión, 
+              comodidad y exactitud en cada movimiento. Gracias a su ergonomía especialmente pensada para la posición de tu mano, 
+              puedes pasar horas jugando con total confort.
+            </p>
+          </div>
+          <div class="product__description-content-add">
+            <button class="product__description-content-add-btn">
+              <i class="fa-solid fa-cart-plus cart-description"></i>
+              <span>Agregar al carrito</span>
+            </button>
+            <i class="fa-solid fa-heart add-favorites"></i>
+          </div>
+        </div>
+      </div>
+      <div class="canvas__overlay-blur-product-description"></div>
+      <!-- end Product description Area -->
 
       <!-- start banner slider Area -->
       <div class="container__carousel-banner">
@@ -274,7 +312,7 @@
         <h2>Porque Comprar Con Nosotros</h2>
       </div> -->
           <div class="features__content">
-            <div class="features__content-card">
+            <div class="features__content-card" data-features>
               <i class="fa-solid fa-truck-fast icon-card"></i>
               <h3 class="title-card">Envío Rapido</h3>
               <p class="description-card">Nuestros envíos son rápidos y seguros.</p>
@@ -305,7 +343,7 @@
         <h2>Nuevos Productos</h2>
         <span>Ver todos</span>
       </div>
-      <div class="container__carousel-products-template">   
+      <div class="container__carousel-products-template card__template-product">   
         <template id="card__template">
           <div class="products__template-content-card">
             <img src="Assets/images/products/consolas/consolas-product-01.png" alt="consolas product 01"/>
@@ -354,7 +392,7 @@
         <h2>Consolas</h2>
         <span>Ver todos</span>
       </div>
-      <div class="container__carousel-products-template-consoles">
+      <div class="container__carousel-products-template-consoles card__template-product">
         <template id="card__template">
           <div class="products__template-content-card">
             <img src="Assets/images/products/consolas/consolas-product-01.png" alt="consolas product 01"/>
@@ -375,7 +413,7 @@
         <h2>Joysticks</h2>
         <span>Ver todos</span>
       </div>
-      <div class="container__carousel-products-template-joysticks">
+      <div class="container__carousel-products-template-joysticks card__template-product">
        
       </div>
     </section>
@@ -387,7 +425,7 @@
         <h2>Sonido</h2>
         <span>Ver todos</span>
       </div>
-      <div class="container__carousel-products-template-sounds">
+      <div class="container__carousel-products-template-sounds card__template-product">
         
       </div>
     </section>
@@ -399,7 +437,7 @@
         <h2>Varios</h2>
         <span>Ver todos</span>
       </div>
-      <div class="container__carousel-products-template-various">
+      <div class="container__carousel-products-template-various card__template-product">
         
       </div>
     </section>
@@ -499,13 +537,14 @@
 
 <!-- start script Carousel Area -->
 
-    <script type="module" src="controllers/products-controller.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-    <script src="controllers/joysticks-products.js"></script>
-    <script src="controllers/console-products.js"></script> 
-    <script src="controllers/sounds-products.js"></script> 
-    <script src="controllers/various-products.js"></script>
-    <script src="js/login.js"></script>
+<script src="js/products-description.js"></script>
+<script type="module" src="controllers/products-controller.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+<script src="controllers/joysticks-products.js"></script>
+<script src="controllers/console-products.js"></script> 
+<script src="controllers/sounds-products.js"></script> 
+<script src="controllers/various-products.js"></script>
+<script src="js/login.js"></script>
     <script src="js/script.js"></script>
     <script>
       var slider = tns({
