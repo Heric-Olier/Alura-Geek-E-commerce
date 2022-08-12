@@ -4,6 +4,7 @@ const overlayCanvasBlur = document.querySelector('.canvas__overlay-blur-product-
 const btncCloseProductDescription = document.querySelector('.product__description-btn-close');
 const btnAddToFavorite = document.querySelector('.add-favorites');
 const templateModal = document.querySelector("#template__card-description").content;
+const modalProductDescription = document.querySelector('.modal__product-description');
 
 
 
@@ -51,6 +52,7 @@ async function showProducts(id) {
    const idProduct = event.target.parentElement.dataset.id;
       productDescription.classList.toggle('active');
       overlayCanvasBlur.classList.toggle('active');
+      modalProductDescription.classList.toggle('active');
       showProducts(idProduct);
 }
 
@@ -58,11 +60,13 @@ async function showProducts(id) {
 btncCloseProductDescription.addEventListener('click', () => {
     productDescription.classList.toggle('active');
     overlayCanvasBlur.classList.toggle('active');
+    modalProductDescription.classList.toggle('active');
 });
 
 overlayCanvasBlur.addEventListener('click', () => {
   overlayCanvasBlur.classList.toggle('active');
   productDescription.classList.toggle('active');
+  modalProductDescription.classList.toggle('active');
 });
 
 
