@@ -35,14 +35,14 @@ async function getTypeProducts(typeProduct) {
   }
 }
 
-const showProductDescription = () => { 
-  productDescription.classList.toggle('active');
-  overlayCanvasBlur.classList.toggle('active');
-}
+// const showProductDescription = () => { 
+//   productDescription.classList.toggle('active');
+//   overlayCanvasBlur.classList.toggle('active');
+// }
 
-overlayCanvasBlur.addEventListener("click", () => {
-  showProductDescription();
-} );
+// overlayCanvasBlur.addEventListener("click", () => {
+//   showProductDescription();
+// } );
 
 
 const newProductsCarousel = () => {

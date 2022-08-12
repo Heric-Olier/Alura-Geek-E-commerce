@@ -37,11 +37,12 @@ const soundsProducts = document.querySelector(".container__carousel-products-tem
       const div = document.createElement("div");
       div.classList.add("sounds-products__carousel-content");
   
-      products.forEach(({ name, price, imageUrl }) => {
+      products.forEach(({ name, price, imageUrl, id }) => {
         const card = cardTemplateSounds.cloneNode(true);
         card.querySelector(".products__template-subtitle").textContent = name;
         card.querySelector(".products__template-price").textContent = price;
         card.querySelector("img").src = imageUrl;
+        card.querySelector(".btn__product-card").dataset.id = id;
         fragment.appendChild(card);
       });
   

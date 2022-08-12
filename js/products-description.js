@@ -11,13 +11,13 @@ const templateModal = document.querySelector("#template__card-description").cont
 
 async function showProducts(id) {
     try {
-        productDescriptionModal.textContent = '';
         const response = await fetch(
             `https://alura-geek-fake-appi-server.herokuapp.com/products?id=${id}`
-          );
-          const products = await response.json();
-  
-      const fragment = document.createDocumentFragment();
+            );
+            const products = await response.json();
+            
+            const fragment = document.createDocumentFragment();
+            productDescriptionModal.textContent = '';
   
       products.forEach(({ name, price, imageUrl, description }) => {
         const card = templateModal.cloneNode(true);
@@ -59,4 +59,10 @@ btncCloseProductDescription.addEventListener('click', () => {
     productDescription.classList.toggle('active');
     overlayCanvasBlur.classList.toggle('active');
 });
+
+overlayCanvasBlur.addEventListener('click', () => {
+  overlayCanvasBlur.classList.toggle('active');
+  productDescription.classList.toggle('active');
+});
+
 
