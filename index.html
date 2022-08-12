@@ -137,24 +137,25 @@
         <div class="product__description-btn-close">
           <i class="fa-solid fa-xmark description-btn-icon"></i>
         </div>
-        <div class="product__description-content">
-          <div class="product__description-content-image">
-            <img src="https://i.imgur.com/kUrt3fl.png" alt="description image">
-          </div>
-          <hr>
-          <div class="product__description-content-title">
-            <h2>Joystick XBox Series X Azul</h2>
-          </div>
-          <div class="product__description-content-price">
-            <h3>$60.00</h3>
-          </div>
-          <div class="product__description-content-description">
-            <h2>Descripción</h2>
-            <p>
-              Este mando de Xbox Series combina funciones revolucionarias mientras conserva precisión, 
-              comodidad y exactitud en cada movimiento. Gracias a su ergonomía especialmente pensada para la posición de tu mano, 
-              puedes pasar horas jugando con total confort.
-            </p>
+        <template id="template__card-description">
+          <div class="product__description-content">
+            <div class="product__description-content-image">
+              <img src="https://i.imgur.com/kUrt3fl.png" alt="description image">
+            </div>
+            <hr>
+            
+              <h2 class="product__description-content-title">Joystick XBox Series X Azul</h2>
+        
+              <h3 class="product__description-content-price">$60.00</h3>
+            
+            <div class="product__description-content-description">
+              <h2>Descripción</h2>
+              <p>
+                Este mando de Xbox Series combina funciones revolucionarias mientras conserva precisión, 
+                comodidad y exactitud en cada movimiento. Gracias a su ergonomía especialmente pensada para la posición de tu mano, 
+                puedes pasar horas jugando con total confort.
+              </p>
+            </div>
           </div>
           <div class="product__description-content-add">
             <button class="product__description-content-add-btn">
@@ -163,7 +164,9 @@
             </button>
             <i class="fa-solid fa-heart add-favorites"></i>
           </div>
-        </div>
+          
+        </template>
+        
       </div>
       <div class="canvas__overlay-blur-product-description"></div>
       <!-- end Product description Area -->
@@ -350,7 +353,8 @@
             <h3 class="products__template-subtitle">Consola Nintendo Switch</h3>
             <h2 class="products__template-price">$600.00</h2>
             <div class="card__hide-content">
-              <button><i class="fa-solid fa-cart-plus cart-products"></i><span>Agregar al carrito</span></button>
+             <button class="btn__product-card" onclick="showProductDescription(event)"><span>Ver Producto</span></button>
+              
             </div>
           </div>
         </template>
@@ -388,21 +392,12 @@
     <!-- start products Area -->
     <section class="products">
        <!-- products Area - Consolas -->
-      <div class="products-title">
+      <div class="products-title">S
         <h2>Consolas</h2>
         <span>Ver todos</span>
       </div>
       <div class="container__carousel-products-template-consoles card__template-product">
-        <template id="card__template">
-          <div class="products__template-content-card">
-            <img src="Assets/images/products/consolas/consolas-product-01.png" alt="consolas product 01"/>
-            <h3 class="products__template-subtitle">Consola Nintendo Switch</h3>
-            <h2 class="products__template-price">$600.00</h2>
-            <div class="card__hide-content">
-              <button><i class="fa-solid fa-cart-plus cart-products"></i><span>Agregar al carrito</span></button>
-            </div>
-          </div>
-        </template>
+  
       </div>
     </section>
     <!-- end products Area -->
@@ -544,6 +539,8 @@
 <script src="controllers/console-products.js"></script> 
 <script src="controllers/sounds-products.js"></script> 
 <script src="controllers/various-products.js"></script>
+<script src="controllers/console-products-description.js"></script>
+<script src="controllers/"></script>
 <script src="js/login.js"></script>
     <script src="js/script.js"></script>
     <script>

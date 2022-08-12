@@ -1,3 +1,7 @@
+
+const productDescription = document.querySelector('.product__description');
+const overlayCanvasBlur = document.querySelector('.canvas__overlay-blur-product-description');
+
 const newProducts = document.querySelector(
   ".container__carousel-products-template"
 ); //template de los productos nuevos
@@ -31,6 +35,15 @@ async function getTypeProducts(typeProduct) {
   }
 }
 
+const showProductDescription = () => { 
+  productDescription.classList.toggle('active');
+  overlayCanvasBlur.classList.toggle('active');
+}
+
+overlayCanvasBlur.addEventListener("click", () => {
+  showProductDescription();
+} );
+
 
 const newProductsCarousel = () => {
   tns({
@@ -58,11 +71,12 @@ async function showProducts() {
     const div = document.createElement("div");
     div.classList.add("new-products__carousel-content");
 
-    products.forEach(({ name, price, imageUrl }) => {
+    products.forEach(({ name, price, imageUrl, id }) => {
       const card = cardTemplate.cloneNode(true);
       card.querySelector(".products__template-subtitle").textContent = name;
       card.querySelector(".products__template-price").textContent = price;
       card.querySelector("img").src = imageUrl;
+      card.querySelector(".btn__product-card").dataset.id = id;
       fragment.appendChild(card);
     });
 
@@ -76,4 +90,3 @@ async function showProducts() {
 }
 
 showProducts();
-
