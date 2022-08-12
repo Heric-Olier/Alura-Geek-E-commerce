@@ -1,4 +1,5 @@
 const productDescription = document.querySelector('.product__description');
+const productDescriptionModal = document.querySelector('.modal__product-description');
 const overlayCanvasBlur = document.querySelector('.canvas__overlay-blur-product-description');
 const btncCloseProductDescription = document.querySelector('.product__description-btn-close');
 const btnAddToFavorite = document.querySelector('.add-favorites');
@@ -10,7 +11,7 @@ const templateModal = document.querySelector("#template__card-description").cont
 
 async function showProducts(id) {
     try {
-        productDescription.textContent = '';
+        productDescriptionModal.textContent = '';
         const response = await fetch(
             `https://alura-geek-fake-appi-server.herokuapp.com/products?id=${id}`
           );
@@ -25,10 +26,18 @@ async function showProducts(id) {
         card.querySelector(".product__description-content-description").textContent = description;
         card.querySelector("img").src = imageUrl;
         
+        const favoriteItem = card.querySelector(".add-favorites");
+        console.log(favoriteItem);
+        card.querySelector(".add-favorites").addEventListener('click', () => {
+            console.log(favoriteItem);
+            favoriteItem.classList.toggle('active');
+            console.log('Añadir a favoritos');
+        });
+        
         fragment.appendChild(card);
       });
   
-        productDescription.appendChild(fragment);
+      productDescriptionModal.appendChild(fragment);
     } catch (error) {
       console.log(error);
     } finally {
@@ -51,10 +60,3 @@ btncCloseProductDescription.addEventListener('click', () => {
     overlayCanvasBlur.classList.toggle('active');
 });
 
-btnAddToFavorite.addEventListener('click', () => {
-    btnAddToFavorite.classList.toggle('active');
-} );
-
-overlayCanvasBlur.addEventListener('click', () => {
-    showProductDescription();
-} );

@@ -177,7 +177,7 @@ body {
   align-items: center;
 }
 
-/*! <--------- Prduct Description Section --------->*/
+/*! <--------- Product Description Section --------->*/
 
 .product__description {
   padding: 60px 50px;
@@ -274,6 +274,7 @@ hr {
 .product__description-content-title {
   font-size: 28px;
   font-weight: 700;
+  line-height: 2rem;
   font-family: var(--font-poppins);
   color: var(--secondary-black);
   margin-bottom: 22px;
