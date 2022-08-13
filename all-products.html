@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alura Geek</title>
+
+    <!-- font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- fontawesome kit -->
+
+    <script
+      src="https://kit.fontawesome.com/4d63ed8f35.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!---- favicon ---->
+
+    <link
+      rel="shortcut icon"
+      href="Assets/images/hero/logo-favi.svg"
+      type="image/x-icon"
+    />
+
+    <!-- styles -->
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/products.css" />
+    <link rel="stylesheet" href="css/all-products.css" />
+    <link rel="stylesheet" href="css/modal-products-description.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
+    <!-- <link rel="stylesheet" href="css/responsive.css" /> -->
+  </head>
+  <body>
+    <!-- start banner Area -->
+    <section class="banner__area">
+      <!-- start Header Area -->
+      <header class="header__area">
+        <div class="header__area-content">
+          <!-- search bar Area -->
+          <div class="search__bar">
+            <label for="search" class="search__area">
+              <button class="icon-search-hide" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+              <i class="fas fa-times search__close-btn"></i>
+              <input type="text" id="search" placeholder="Buscar Productos" />
+            </label>
+          </div>
+          <div class="nav__logo">
+            <a href="index.html">
+              <img
+                src="Assets/images/hero/logo-Alura-Geek.svg"
+                alt="Alura Geek"
+              />
+            </a>
+          </div>
+          <div class="nav__menu">
+            <ul>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#footer">Nosotros</a></li>
+              <li><a href="#">Productos</a></li>
+              <li><a href="#">Contacto</a></li>
+              <i class="fa-solid fa-cart-shopping"></i>
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid fa-user"></i>
+            </ul>
+          </div>
+        </div>
+      </header>
+    </section>
+      <!-- end Header Area -->
+
+
+      <main>
+              <!-- All Products Area -->
+              <section class="products">
+                <!-- products Area - Consolas -->
+               <div class="products-title">
+                 <h2>Consolas</h2>
+                 <span>Ver todos</span>
+               </div>
+               <div class="container__carousel-products-template-consoles card__template-product">
+                <template id="card__template">
+              <div class="products__template-content-card">
+                <img src="Assets/images/products/consolas/consolas-product-01.png" alt="consolas product 01"/>
+                <h3 class="products__template-subtitle">Consola Nintendo Switch</h3>
+                <h2 class="products__template-price">$600.00</h2>
+                <div class="card__hide-content">
+                 <button class="btn__product-card" onclick="showProductDescription(event)"><span>Ver Producto</span></button>
+                  
+                </div>
+              </div>
+            </template>
+               </div>
+             </section>
+             <!-- end products Area -->
+         
+             <!-- start joystick Area -->
+             <section class="joysticks">
+               <div class="joysticks-title">
+                 <h2>Joysticks</h2>
+                 <span>Ver todos</span>
+               </div>
+               <div class="container__carousel-products-template-joysticks card__template-product">
+                
+               </div>
+             </section>
+             <!-- end joystick Area -->
+         
+             <!-- start sounds Area -->
+             <section class="sounds">
+               <div class="sounds-title">
+                 <h2>Sonido</h2>
+                 <span>Ver todos</span>
+               </div>
+               <div class="container__carousel-products-template-sounds card__template-product">
+                 
+               </div>
+             </section>
+             <!-- end sounds Area -->
+         
+             <!-- start various Area -->
+             <section class="various">
+               <div class="various-title">
+                 <h2>Varios</h2>
+                 <span>Ver todos</span>
+               </div>
+               <div class="container__carousel-products-template-various card__template-product">
+                 
+               </div>
+             </section>
+             <!-- end various Area -->
+      </main>
+
+      <!-- start Login Area -->
+      <div class="login__area">
+        <div class="login__area-content">
+          <div class="product__login-btn-close">
+            <i class="fa-solid fa-xmark login-btn-icon"></i>
+          </div>
+          <div class="login__area-content-logo">
+            <a href="index.html">
+              <img
+                src="Assets/images/hero/logo-Alura-Geek-login.svg"
+                alt="Alura Geek"
+              />
+            </a>
+          </div>
+          <div class="login__area-content-title">
+            <h2>Iniciar Sesión</h2>
+          </div>
+          <div class="login__area-content-form">
+            <form action="">
+              <div class="form__group">
+                <label for="email" class="form__label">
+                  <!-- <i class="fa-solid fa-envelope"></i> -->
+                </label>
+                <input type="email" id="email" placeholder="Email" />
+              </div>
+              <div class="form__group">
+                <label for="password" class="form__label">
+                  <!-- <i class="fa-solid fa-lock"></i> -->
+                </label>
+                <input type="password" id="password" placeholder="Contraseña" />
+              </div>
+              <div class="form__group">
+                <button class="form__btn" type="submit">
+                  <!-- <i class="fa-solid fa-sign-in-alt"></i> -->
+                  <span>Iniciar Sesión</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="canvas__overlay-blur"></div>
+      <!-- end Login Area -->
+
+      <!-- start Product description Area -->
+      <div class="product__description">
+        <div class="product__description-btn-close">
+          <i class="fa-solid fa-xmark description-btn-icon"></i>
+        </div>
+        <div class="modal__product-description">
+          <template id="template__card-description">
+            <div class="product__description-content">
+              <div class="product__description-content-image">
+                <img
+                  src="https://i.imgur.com/kUrt3fl.png"
+                  alt="description image"
+                />
+              </div>
+              <hr />
+
+              <h2 class="product__description-content-title">
+                Joystick XBox Series X Azul
+              </h2>
+
+              <h3 class="product__description-content-price">$60.00</h3>
+
+              <div class="product__description-content-description">
+                <h2>Descripción</h2>
+                <p>
+                  Este mando de Xbox Series combina funciones revolucionarias
+                  mientras conserva precisión, comodidad y exactitud en cada
+                  movimiento. Gracias a su ergonomía especialmente pensada para
+                  la posición de tu mano, puedes pasar horas jugando con total
+                  confort.
+                </p>
+              </div>
+            </div>
+            <div class="product__description-content-add">
+              <button class="product__description-content-add-btn">
+                <i class="fa-solid fa-cart-plus cart-description"></i>
+                <span>Agregar al carrito</span>
+              </button>
+              <i class="fa-solid fa-heart add-favorites"></i>
+            </div>
+          </template>
+        </div>
+      </div>
+      <div class="canvas__overlay-blur-product-description"></div>
+    <!-- end Product description Area -->
+
+    <!-- start footer Area -->
+    <footer class="footer" id="footer">
+      <div class="footer__content">
+        <div class="footer__content-about">
+          <h2>Sobre Nosotros</h2>
+          <p>
+            Somos una empresa dedicada a la venta de productos de calidad, con
+            una amplia gama de productos para todos los gustos y necesidades del
+            cliente.
+          </p>
+          <div class="footer__content-logo">
+            <img
+              src="Assets/images/footer/logo-Alura-Geek-white.svg"
+              alt="logo"
+            />
+          </div>
+        </div>
+        <div class="footer__content-menu">
+          <ul class="footer__content-menu-list">
+            <h2>Categorias</h2>
+            <li class="footer__content-menu-item">
+              <a href="#">Inicio</a>
+            </li>
+            <li class="footer__content-menu-item">
+              <a href="#">Productos</a>
+            </li>
+            <li class="footer__content-menu-item">
+              <a href="#">Nosotros</a>
+            </li>
+            <li class="footer__content-menu-item">
+              <a href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__content-information">
+          <ul class="footer__content-information-list">
+            <h2>Información</h2>
+            <li class="footer__content-information-item">
+              <a href="#">Terminos y condiciones</a>
+            </li>
+            <li class="footer__content-information-item">
+              <a href="#">Privacidad</a>
+            </li>
+            <li class="footer__content-information-item">
+              <a href="#">Cookies</a>
+            </li>
+            <li class="footer__content-information-item">
+              <a href="#">Trabaja con nosotros</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__content-social">
+          <ul class="footer__content-social-list">
+            <h2>Siguenos</h2>
+            <h3>Nuestras redes sociales</h3>
+            <li class="footer__content-social-item">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            </li>
+            <li class="footer__content-social-item">
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li class="footer__content-social-item">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li class="footer__content-social-item">
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__content-copyright">
+        <p>
+          Copyright © 2022 | Coded with
+          <i class="fa fa-heart" aria-hidden="true"></i>
+          by
+          <a
+            href="https://heric-olier-frontend-developer.netlify.app/"
+            target="_blank"
+          >
+            Heric Olier
+          </a>
+        </p>
+      </div>
+    </footer>
+    <!-- End footer Area -->
+
+    <!-- start script Area -->
+    <script src="js/products-description.js"></script>
+    <script type="module" src="controllers/products-controller.js"></script>
+    <script src="controllers/joysticks-products.js"></script>
+    <script src="controllers/console-products.js"></script> 
+    <script src="controllers/sounds-products.js"></script> 
+    <script src="controllers/various-products.js"></script>
+    <script src="controllers/console-products-description.js"></script>
+    <script src="controllers/"></script>
+    <script src="js/login.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- End script  Area -->
+  </body>
+</html>

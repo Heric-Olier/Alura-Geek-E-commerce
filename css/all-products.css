@@ -1,0 +1,52 @@
+:root {
+  --background-white: #fff;
+  --primary-red: #ee332c;
+  --secondary-black: #222222;
+  --gray: #777;
+  --gray-light: #e3e3e3;
+  --font-poppins: "Poppins", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 24px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.new__products-title,
+.products-title,
+.joysticks-title,
+.sounds-title,
+.various-title {
+  max-width: 100%;
+  padding: 0 100px;
+}
+
+.new__products-title span,
+.products-title span,
+.joysticks-title span,
+.sounds-title span,
+.various-title span {
+  display: none;
+}
+
+.banner__area {
+  min-height: 0;
+  padding: 100px 45px;
+}
+
+.container__carousel-products-template,
+.container__carousel-products-template-consoles,
+.container__carousel-products-template-joysticks,
+.container__carousel-products-template-sounds,
+.container__carousel-products-template-various {
+  max-width: 100%;
+  padding: 0 100px;
+  margin: 0 auto;
+}
