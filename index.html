@@ -84,7 +84,7 @@
             <ul>
               <li><a href="#">Inicio</a></li>
               <li><a href="#footer">Nosotros</a></li>
-              <li><a href="all-products.html">Productos</a></li>
+              <li><a href="../all-products.html">Productos</a></li>
               <li><a href="#">Contacto</a></li>
               <i class="fa-solid fa-cart-shopping"></i>
               <i class="fa-solid fa-magnifying-glass"></i>
@@ -116,19 +116,20 @@
             <form action="">
               <div class="form__group">
                 <label for="email" class="form__label">
-                  <!-- <i class="fa-solid fa-envelope"></i> -->
+                  
                 </label>
-                <input type="email" id="email" placeholder="Email" />
+                <input type="email" id="email"  placeholder="Email" />
               </div>
               <div class="form__group">
                 <label for="password" class="form__label">
-                  <!-- <i class="fa-solid fa-lock"></i> -->
+                 
                 </label>
-                <input type="password" id="password" placeholder="Contraseña" />
+                <input type="password" id="password"  placeholder="Contraseña" />
               </div>
+              <h2 class="error__message">error</h2>
               <div class="form__group">
                 <button class="form__btn" type="submit">
-                  <!-- <i class="fa-solid fa-sign-in-alt"></i> -->
+                  
                   <span>Iniciar Sesión</span>
                 </button>
               </div>
@@ -377,23 +378,23 @@
         <div class="hot__deal-text-content">
           <ul class="text__content-countdown">
             <li>
-              <span class="countdown-number">00</span>
+              <span class="countdown-number-days">00</span>
               <h3>Días</h3>
             </li>
             <li>
-              <span class="countdown-number">00</span>
+              <span class="countdown-number-hours">00</span>
               <h3>Horas</h3>
             </li>
             <li>
-              <span class="countdown-number">00</span>
+              <span class="countdown-number-minutes">00</span>
               <h3>Min.</h3>
               </li>
               <li>
-                <span class="countdown-number">00</span>
+                <span class="countdown-number-seconds">00</span>
                 <h3>Seg.</h3>
               </li>
             </ul>
-            <h2>GRAN OFERTA ESTA SEMANA</h2>
+            <h2>GRAN OFERTA ESTE MES</h2>
             <h3>TODO EL SONIDO CON 40% DE DESCUENTO</h3>
         </div>  
       </div>
@@ -404,7 +405,7 @@
        <!-- products Area - Consolas -->
       <div class="products-title">
         <h2>Consolas</h2>
-        <span>Ver todos</span>
+        <span><a href="../all-products.html">Ver todos</a></span>
       </div>
       <div class="container__carousel-products-template-consoles card__template-product">
         
@@ -534,6 +535,8 @@
 <!-- start script Carousel Area -->
 
 <script src="js/products-description.js"></script>
+<script src="js/countdown-hot-deal.js"></script>
+<script type="module" src="js/login-validation.js"></script>
 <script type="module" src="controllers/products-controller.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 <script src="controllers/joysticks-products.js"></script>
@@ -542,7 +545,7 @@
 <script src="controllers/various-products.js"></script>
 <script src="controllers/console-products-description.js"></script>
 <script src="controllers/"></script>
-<script src="js/login.js"></script>
+<script type="module" src="js/login.js"></script>
     <script src="js/script.js"></script>
     <script>
       var slider = tns({
