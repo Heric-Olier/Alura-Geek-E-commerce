@@ -51,7 +51,7 @@ body {
   cursor: pointer;
 }
 
-.products__btn-add-products a {
+.products__btn-add-products h2 {
   color: var(--background-white);
   padding: 8px 18px;
   font-size: 16px;
@@ -64,7 +64,7 @@ body {
   border: 3px solid var(--primary-red);
 }
 
-.products__btn-add-products:hover a {
+.products__btn-add-products:hover h2 {
   color: var(--primary-red);
 }
 

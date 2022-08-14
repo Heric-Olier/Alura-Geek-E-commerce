@@ -1,0 +1,225 @@
+:root {
+  --background-white: #fff;
+  --primary-red: #ee332c;
+  --secondary-black: #222222;
+  --gray: #777;
+  --gray-light: #e3e3e3;
+  --font-poppins: "Poppins", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 24px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.add-product__area {
+  padding: 40px 40px;
+  width: 28rem;
+  height: 47rem;
+  position: absolute;
+  margin: -5% auto;
+  background-color: var(--background-white);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.151);
+  z-index: 6;
+  overflow-y: scroll hidden;
+  left: 0;
+  right: 0;
+  transform: scale(0);
+  -webkit-overflow-scrolling: touch;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.add-product__area.active {
+  transform: scale(1);
+}
+
+.add-product__area-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: all 0.9s ease;
+}
+
+.add-product__area-content-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--primary-red);
+  font-family: var(--font-poppins);
+  margin-bottom: 20px;
+}
+
+.btn__close-add-product-area {
+  width: 26px;
+  height: 26px;
+  font-size: 22px;
+  background-color: var(--primary-red);
+  color: var(--background-white);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn__close-add-product-area:hover {
+  background-color: var(--secondary-black);
+  transform: rotate(360deg);
+}
+
+.add-product__area-content-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: all 0.9s ease;
+}
+
+form {
+  width: 100%;
+}
+
+.form-group {
+  width: 100%;
+  display: flex;
+  margin: 20px 0;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--secondary-black);
+  font-family: var(--font-poppins);
+  margin-bottom: 10px;
+}
+
+.form-group input {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--gray-light);
+  font-family: var(--font-poppins);
+  color: var(--secondary-black);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0 10px;
+  transition: all 0.3s ease;
+  border: 1px solid var(--gray);
+}
+
+.form-group input:focus {
+  outline: none;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  border-radius: 6px;
+  border: none;
+  background-color: var(--gray-light);
+  font-family: var(--font-poppins);
+  color: var(--secondary-black);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0 10px;
+  transition: all 0.3s ease;
+  border: 1px solid var(--gray);
+}
+
+textarea:focus {
+  outline: none;
+}
+
+textarea::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+textarea::-webkit-scrollbar-track {
+  background-color: var(--gray-light);
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: var(--gray);
+}
+
+textarea::placeholder {
+  color: var(--gray);
+}
+
+.form-group select {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-product__area-content-form input,
+select {
+  width: 100%;
+  height: 44px;
+  border-radius: 4px;
+  padding: 0 10px;
+  font-size: 16px;
+  font-family: var(--font-poppins);
+  color: var(--secondary-black);
+  transition: all 0.3s ease-in-out;
+}
+
+.add-product__area-content-form input:focus {
+  border: 1px solid var(--primary-red);
+}
+
+.add-product__area-content-form input::placeholder {
+  color: var(--gray);
+}
+
+.add-product__area-content-btn {
+  width: 70%;
+}
+
+.add-product__area-content-btn button {
+  width: 100%;
+  height: 44px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--primary-red);
+  font-family: var(--font-poppins);
+  color: var(--background-white);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.add-product__area-content-btn button:hover {
+  background-color: var(--gray-light);
+  border: 2px solid var(--primary-red);
+  color: var(--primary-red);
+}
