@@ -20,7 +20,6 @@ const clearFields = () => {
 
 loginIcon.addEventListener("click", () => {
   showLogin();
-  fieldPassword.focus();
   fieldEmail.focus();
 });
 

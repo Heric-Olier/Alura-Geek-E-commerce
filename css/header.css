@@ -151,8 +151,7 @@ body {
 
 .nav__menu ul li,
 .fa-cart-shopping,
-.fa-magnifying-glass,
-.fa-user {
+.fa-magnifying-glass {
   margin-left: 40px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
@@ -168,10 +167,29 @@ body {
 }
 
 .fa-cart-shopping:hover,
-.fa-magnifying-glass:hover,
-.fa-user:hover {
+.fa-magnifying-glass:hover {
   color: var(--primary-red);
 }
+
+.btn-user-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-user-container.active {
+  margin-left: 40px;
+  background-color: var(--primary-red);
+  
+}
+
+  
 
 .nav__menu ul li a:after,
 .new__products-title span:after,
