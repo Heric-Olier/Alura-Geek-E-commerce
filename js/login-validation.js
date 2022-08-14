@@ -50,7 +50,7 @@ const login = async (email, password) => {
         setUserContainer(btnUserContainer);
         console.log("Usuario logeado");
         setTimeout(() => {
-          window.location.href = "../all-products.html";
+          window.location = "./all-products.html";
         }, 1500);
         getUser(user);
         getUserContainer(btnUserContainer);
