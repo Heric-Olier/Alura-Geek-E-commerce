@@ -50,8 +50,7 @@ const login = async (email, password) => {
           showMessageError("Usuario logeado");
           setUser(user);
           window.location = "./all-products.html";
-          addUserIcon();
-        }, 1500);
+        }, 2500);
         return true;
       } else {
         showMessageError("Email o contraseña incorrectos");
@@ -95,17 +94,11 @@ const addUserIcon = () => {
         window.location = "./all-products.html";
       });
     }
+    if(!user)
+    if(window.open.location.pathname === "/all-products.html"){
+      alert("Bienvenido");
+    }
   }
 };
 addUserIcon();
 
-// validamos que el usuario no pueda acceder a la pagina de all-products.html si no esta logeado
-
-const validateLogin2 = () => {
-  const user = getUser();
-  if (!user && window.location.pathname === "./all-products.html") {
-    alert("Por favor, inicie sesión para acceder a esta página");
-    window.location = "./index.html";
-  }
-};
-validateLogin2();
