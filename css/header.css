@@ -185,11 +185,13 @@ body {
 
 .btn-user-container.active {
   margin-left: 40px;
+  border: 2px solid var(--secondary-black);
   background-color: var(--primary-red);
-  
 }
 
-  
+.btn-user-container:hover {
+  transform: scale(1.15);
+}
 
 .nav__menu ul li a:after,
 .new__products-title span:after,

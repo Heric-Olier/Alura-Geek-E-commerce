@@ -29,6 +29,48 @@ body {
   padding: 0 100px; */
 }
 
+.products-title {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  padding: 0 100px;
+}
+
+.products {
+  padding-top: 80px;
+}
+
+.products__btn-add-products {
+  background-color: var(--primary-red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
+  border: 3px solid var(--primary-red);
+  cursor: pointer;
+}
+
+.products__btn-add-products a {
+  color: var(--background-white);
+  padding: 8px 18px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.products__btn-add-products:hover {
+  background-color: var(--background-white);
+  border: 3px solid var(--primary-red);
+}
+
+.products__btn-add-products:hover a {
+  color: var(--primary-red);
+}
+
+
+
+
 .new__products-title span,
 .products-title span,
 .joysticks-title span,

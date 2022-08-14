@@ -3,38 +3,37 @@ const fieldPassword = document.getElementById("password");
 const btnLogin = document.querySelector("form__btn");
 const errorMessage = document.querySelector(".error__message");
 const btnUserContainer = document.querySelector(".btn-user-container");
-
+const loginIcon = document.querySelector(".fa-user");
 
 export const showMessageError = (message) => {
   errorMessage.innerHTML = message;
   errorMessage.classList.add("active");
 };
 
-
 // guardamos en sessionStorage la clase active del boton user container
 
-const setUserContainer = (btnUserContainer) => {
-    sessionStorage.setItem("userContainer", btnUserContainer.classList.add("active"));
-}
+// const setUserContainer = (btnUserContainer) => {
+//   sessionStorage.setItem(
+//     "userContainer",
+//     btnUserContainer.classList.add("active")
+//   );
+// };
 
-const getUserContainer = () => {
-    return sessionStorage.getItem("userContainer");
-}
-
-
+// const getUserContainer = () => {
+//   return sessionStorage.getItem("userContainer");
+// };
 
 // guardamos el usuario en sessionStorage
 
 const setUser = (user) => {
-    sessionStorage.setItem("user", JSON.stringify(user));
-}  
+  sessionStorage.setItem("user", JSON.stringify(user));
+};
 
 // recuperamos el usuario de sessionStorage
 
 const getUser = () => {
-    return JSON.parse(sessionStorage.getItem("user"));
-}
-
+  return JSON.parse(sessionStorage.getItem("user"));
+};
 
 const login = async (email, password) => {
   try {
@@ -42,19 +41,17 @@ const login = async (email, password) => {
       "https://alura-geek-fake-appi-server.herokuapp.com/profile"
     );
     const data = await response.json();
-    
+
     data.forEach((user) => {
       const { email: userEmail, password: userPassWord } = user;
       if (email === userEmail && password === userPassWord) {
-        setUser(user);
-        setUserContainer(btnUserContainer);
         console.log("Usuario logeado");
         setTimeout(() => {
+          showMessageError("Usuario logeado");
+          setUser(user);
           window.location = "./all-products.html";
+          addUserIcon();
         }, 1500);
-        getUser(user);
-        getUserContainer(btnUserContainer);
-        showMessageError("Usuario logeado");
         return true;
       } else {
         showMessageError("Email o contraseña incorrectos");
@@ -67,9 +64,6 @@ const login = async (email, password) => {
     console.log(error);
   }
 };
-
-
-
 
 const validateLogin = () => {
   const email = fieldEmail.value;
@@ -91,7 +85,27 @@ loginForm.addEventListener("submit", (e) => {
   }
 });
 
+// creamos una funcion para agregar el icono de usuario al boton de login
+const addUserIcon = () => {
+  const user = getUser();
+  if (user) {
+    btnUserContainer.classList.add("active");
+    if (btnUserContainer.classList.contains("active")) {
+      loginIcon.addEventListener("click", () => {
+        window.location = "./all-products.html";
+      });
+    }
+  }
+};
+addUserIcon();
 
+// validamos que el usuario no pueda acceder a la pagina de all-products.html si no esta logeado
 
-
-
+const validateLogin2 = () => {
+  const user = getUser();
+  if (!user && window.location.pathname === "./all-products.html") {
+    alert("Por favor, inicie sesión para acceder a esta página");
+    window.location = "./index.html";
+  }
+};
+validateLogin2();
