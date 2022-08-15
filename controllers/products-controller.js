@@ -1,3 +1,5 @@
+// const productDescription = document.querySelector(".product__description");
+
 
 const newProducts = document.querySelector(
   ".container__carousel-products-template"
@@ -31,15 +33,6 @@ async function getTypeProducts(typeProduct) {
     console.log(error);
   }
 }
-
-// const showProductDescription = () => {
-//   productDescription.classList.toggle('active');
-//   overlayCanvasBlur.classList.toggle('active');
-// }
-
-// overlayCanvasBlur.addEventListener("click", () => {
-//   showProductDescription();
-// } );
 
 const newProductsCarousel = () => {
   tns({
@@ -87,4 +80,5 @@ async function showProducts() {
     }
   }
 }
+
 showProducts();

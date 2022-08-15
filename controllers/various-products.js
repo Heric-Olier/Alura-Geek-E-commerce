@@ -53,10 +53,7 @@ async function showVariousProducts() {
   } catch (error) {
     console.log(error);
   } finally {
-    const urlPage = window.location.pathname;
-    if (urlPage === "/index.html") {
-      variousCarousel();
-    }
+    variousCarousel();
   }
 }
 

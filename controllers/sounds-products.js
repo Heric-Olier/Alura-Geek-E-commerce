@@ -53,10 +53,7 @@ async function showSoundsProducts() {
   } catch (error) {
     console.log(error);
   } finally {
-    const urlPage = window.location.pathname;
-    if (urlPage === "/index.html") {
-      soundsCarousel();
-    }
+    soundsCarousel();
   }
 }
 
