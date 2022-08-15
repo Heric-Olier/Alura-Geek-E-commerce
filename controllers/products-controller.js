@@ -1,7 +1,3 @@
-const productDescription = document.querySelector(".product__description");
-const overlayCanvasBlur = document.querySelector(
-  ".canvas__overlay-blur-product-description"
-);
 
 const newProducts = document.querySelector(
   ".container__carousel-products-template"
