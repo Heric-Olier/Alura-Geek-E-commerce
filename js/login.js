@@ -1,5 +1,5 @@
 const loginArea = document.querySelector(".login__area");
-const canvasOverlayBlurLogin = document.querySelector(".canvas__overlay-blur");
+const canvasOverlayBlurLogin = document.querySelector(".canvas__overlay-blur-login");
 const loginIcon = document.querySelector(".fa-user");
 const btnCloseLogin = document.querySelector(".fa-xmark");
 const loginAreaContent = document.querySelector(".login__area-content");

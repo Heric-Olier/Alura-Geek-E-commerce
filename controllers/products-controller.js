@@ -62,7 +62,6 @@ const newProductsCarousel = () => {
 };
 
 // creamos una funcion para moostrar los productos nuevos
-const urlPage = window.location.pathname;
 
 async function showProducts() {
   try {
@@ -86,12 +85,10 @@ async function showProducts() {
   } catch (error) {
     console.log(error);
   } finally {
+    const urlPage = window.location.pathname;
     if (urlPage === "/index.html") {
       newProductsCarousel();
     }
   }
 }
-
-if (urlPage === "/index.html") {
-  showProducts();
-}
+showProducts();

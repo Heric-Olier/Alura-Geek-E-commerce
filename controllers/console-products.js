@@ -1,7 +1,7 @@
 const consolesProducts = document.querySelector(
   ".container__carousel-products-template-consoles"
 ); //template de los productos de consolas
-const cardTemplate = document.querySelector("#card__template").content;
+const cardTemplateConsole = document.querySelector("#card__template").content;
 
 async function getTypeProducts(typeProduct) {
   try {
@@ -40,7 +40,7 @@ async function showConsoleProducts() {
     div.classList.add("consoles-products__carousel-content");
 
     products.forEach(({ name, price, imageUrl, id }) => {
-      const card = cardTemplate.cloneNode(true);
+      const card = cardTemplateConsole.cloneNode(true);
       card.querySelector(".products__template-subtitle").textContent = name;
       card.querySelector(".products__template-price").textContent = price;
       card.querySelector("img").src = imageUrl;

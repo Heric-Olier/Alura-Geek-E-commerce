@@ -78,6 +78,4 @@ async function showAllProducts() {
   }
 }
 
-if (urlPage === "/all-products.html") {
   showAllProducts();
-}
