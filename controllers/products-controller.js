@@ -1,8 +1,9 @@
-// const productDescription = document.querySelector(".product__description");
 
 const newProducts = document.querySelector(
   ".container__carousel-products-template"
-); //template de los productos nuevos
+  ); //template de los productos nuevos
+  
+  const productDescription = document.querySelector(".product__description");
 const cardTemplate = document.querySelector("#card__template").content;
 
 //creamos una funcion para traer los datos de todos los articulos desde la api json
