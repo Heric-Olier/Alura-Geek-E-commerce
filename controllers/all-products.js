@@ -20,7 +20,7 @@ async function getAllProducts() {
 const removeProduct = async (id) => {
   try {
     console.log(id);
-  const res = await fetch(
+    const res = await fetch(
       `https://alura-geek-fake-appi-server.herokuapp.com/products/${id}`,
       {
         method: "DELETE",
@@ -63,12 +63,8 @@ async function showAllProducts() {
 
         card.querySelector(".btn-remove").addEventListener("click", () => {
           removeProduct(btnRemove.dataset.id);
-       
-          
         });
-        card.querySelector(".btn-edit").addEventListener("click", () => {
-          
-        });
+        card.querySelector(".btn-edit").addEventListener("click", () => {});
       }
       fragment.appendChild(card);
     });

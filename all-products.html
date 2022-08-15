@@ -112,7 +112,11 @@
             <form action="">
               <div class="form-group">
                 <label for="name"></label>
-                <input type="text" id="name" placeholder="Nombre del producto" />
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Nombre del producto"
+                />
               </div>
               <div class="form-group">
                 <label for="description"></label>
@@ -126,7 +130,11 @@
               </div>
               <div class="form-group">
                 <label for="price"></label>
-                <input type="text" id="price" placeholder="Precio del producto" />
+                <input
+                  type="text"
+                  id="price"
+                  placeholder="Precio del producto"
+                />
               </div>
               <div class="form-group">
                 <label for="image">Imagen Local</label>
@@ -134,7 +142,11 @@
               </div>
               <div class="form-group">
                 <label for="image"></label>
-                <input type="text" id="image-url" placeholder="URL de la imagen" />
+                <input
+                  type="text"
+                  id="image-url"
+                  placeholder="URL de la imagen"
+                />
               </div>
               <div class="form-group">
                 <label for="category">Categoría</label>
@@ -162,10 +174,8 @@
           <div class="products__btn-add-products">
             <h2>Agregar Producto</h2>
           </div>
-          
         </div>
         <div class="all-products-cards">
-
           <template id="card__template">
             <div class="products__template-content-card">
               <img
@@ -179,7 +189,8 @@
               <div class="card__hide-content">
                 <button
                   class="btn__product-card"
-                  onclick="showProductDescription(event)">
+                  onclick="showProductDescription(event)"
+                >
                   <span>Ver Producto</span>
                 </button>
               </div>
@@ -197,11 +208,7 @@
         <div class="canvas__overlay-blur-modal"></div>
       </section>
       <!-- end products Area -->
-
-
     </main>
-
-   
 
     <!-- start Product description Area -->
     <div class="product__description">
@@ -336,19 +343,10 @@
     <!-- End footer Area -->
 
     <!-- start script Area -->
-    <!-- <script type="module" src="js/login-validation.js"></script> -->
     <script src="js/products-description.js"></script>
     <script src="controllers/add-products-modal.js"></script>
-    <!-- <script type="module" src="controllers/products-controller.js"></script> -->
-    <!-- <script src="controllers/joysticks-products.js"></script>
-    <script src="controllers/console-products.js"></script>
-    <script src="controllers/sounds-products.js"></script>
-    <script src="controllers/various-products.js"></script> -->
     <script src="controllers/all-products.js"></script>
-    <!-- <script src="controllers/console-products-description.js"></script> -->
-    <!-- <script src="js/login.js"></script> -->
     <script src="js/script.js"></script>
-    <!-- <script src="controllers/delete-products.js"></script> -->
 
     <!-- End script  Area -->
   </body>
