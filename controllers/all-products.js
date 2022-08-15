@@ -57,7 +57,7 @@ async function showAllProducts() {
 
       const allProductsPage = window.location.pathname;
       console.log(allProductsPage);
-      if (allProductsPage === "/all-products.html") {
+     
         const btnRemove = card.querySelector(".btn-remove");
         const btnEdit = card.querySelector(".btn-edit");
 
@@ -65,7 +65,7 @@ async function showAllProducts() {
           removeProduct(btnRemove.dataset.id);
         });
         card.querySelector(".btn-edit").addEventListener("click", () => {});
-      }
+      
       fragment.appendChild(card);
     });
 

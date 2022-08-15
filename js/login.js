@@ -1,5 +1,5 @@
 const loginArea = document.querySelector(".login__area");
-const canvasOverlayBlurLogin = document.querySelector(".canvas__overlay-blur-login");
+const canvasOverlayBlur = document.querySelector(".canvas__overlay-blur");
 const loginIcon = document.querySelector(".fa-user");
 const btnCloseLogin = document.querySelector(".fa-xmark");
 const loginAreaContent = document.querySelector(".login__area-content");
@@ -9,7 +9,7 @@ const errorMessage = document.querySelector(".error__message");
 
 const showLogin = () => {
   loginArea.classList.toggle("active");
-  canvasOverlayBlurLogin.classList.toggle("active");
+  canvasOverlayBlur.classList.toggle("active");
   loginAreaContent.classList.toggle("active");
 };
 
@@ -30,7 +30,7 @@ btnCloseLogin.addEventListener("click", () => {
   
 });
 
-canvasOverlayBlurLogin.addEventListener("click", () => {
+canvasOverlayBlur.addEventListener("click", () => {
   showLogin();
   clearFields();
   errorMessage.classList.remove("active");
