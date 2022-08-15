@@ -1,6 +1,7 @@
-
-const productDescription = document.querySelector('.product__description');
-const overlayCanvasBlur = document.querySelector('.canvas__overlay-blur-product-description');
+const productDescription = document.querySelector(".product__description");
+const overlayCanvasBlur = document.querySelector(
+  ".canvas__overlay-blur-product-description"
+);
 
 const newProducts = document.querySelector(
   ".container__carousel-products-template"
@@ -35,7 +36,7 @@ async function getTypeProducts(typeProduct) {
   }
 }
 
-// const showProductDescription = () => { 
+// const showProductDescription = () => {
 //   productDescription.classList.toggle('active');
 //   overlayCanvasBlur.classList.toggle('active');
 // }
@@ -43,7 +44,6 @@ async function getTypeProducts(typeProduct) {
 // overlayCanvasBlur.addEventListener("click", () => {
 //   showProductDescription();
 // } );
-
 
 const newProductsCarousel = () => {
   tns({
@@ -62,6 +62,7 @@ const newProductsCarousel = () => {
 };
 
 // creamos una funcion para moostrar los productos nuevos
+const urlPage = window.location.pathname;
 
 async function showProducts() {
   try {
@@ -85,8 +86,12 @@ async function showProducts() {
   } catch (error) {
     console.log(error);
   } finally {
-    newProductsCarousel();
+    if (urlPage === "/index.html") {
+      newProductsCarousel();
+    }
   }
 }
 
-showProducts();
+if (urlPage === "/index.html") {
+  showProducts();
+}

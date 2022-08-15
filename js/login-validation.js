@@ -4,24 +4,12 @@ const btnLogin = document.querySelector("form__btn");
 const errorMessage = document.querySelector(".error__message");
 const btnUserContainer = document.querySelector(".btn-user-container");
 const loginIcon = document.querySelector(".fa-user");
+const mainBtnEditRemove = document.querySelector(".main-btns-edit-remove");
 
 export const showMessageError = (message) => {
   errorMessage.innerHTML = message;
   errorMessage.classList.add("active");
 };
-
-// guardamos en sessionStorage la clase active del boton user container
-
-// const setUserContainer = (btnUserContainer) => {
-//   sessionStorage.setItem(
-//     "userContainer",
-//     btnUserContainer.classList.add("active")
-//   );
-// };
-
-// const getUserContainer = () => {
-//   return sessionStorage.getItem("userContainer");
-// };
 
 // guardamos el usuario en sessionStorage
 
@@ -94,11 +82,13 @@ const addUserIcon = () => {
         window.location = "./all-products.html";
       });
     }
-    if(!user)
-    if(window.open.location.pathname === "/all-products.html"){
-      alert("Bienvenido");
-    }
+    if (!user)
+      if (window.open.location.pathname === "/all-products.html") {
+        alert("Bienvenido");
+      }
   }
 };
 addUserIcon();
+
+// creamos una funcion para agergar el contenedor de los botonoes de editar y eliminar
 

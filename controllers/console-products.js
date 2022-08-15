@@ -1,4 +1,6 @@
-const consolesProducts = document.querySelector(".container__carousel-products-template-consoles"); //template de los productos de consolas
+const consolesProducts = document.querySelector(
+  ".container__carousel-products-template-consoles"
+); //template de los productos de consolas
 const cardTemplate = document.querySelector("#card__template").content;
 
 async function getTypeProducts(typeProduct) {
@@ -25,7 +27,7 @@ const consolesCarousel = () => {
     autoplayButton: false,
     loop: true,
     mouseDrag: true,
-    controls: false
+    controls: false,
   });
 };
 
@@ -43,6 +45,9 @@ async function showConsoleProducts() {
       card.querySelector(".products__template-price").textContent = price;
       card.querySelector("img").src = imageUrl;
       card.querySelector(".btn__product-card").dataset.id = id;
+  
+
+      
       fragment.appendChild(card);
     });
 
@@ -51,8 +56,23 @@ async function showConsoleProducts() {
   } catch (error) {
     console.log(error);
   } finally {
-    consolesCarousel();
+    const urlPage = window.location.pathname;
+    if (urlPage === "/index.html") {
+      consolesCarousel();
+    }
   }
 }
 
 showConsoleProducts();
+
+// creamos una funcion para eliminar los productos desde ek servidor
+
+// creamos una funcion para eliminar los productos con el boton de eliminar
+
+// btnRemove.forEach((btn) => {
+//   btn.addEventListener("click", async (event) => {
+//     const id = event.target.dataset.id;
+//     const products = await removeProduct(id);
+//     console.log(products);
+//   });
+// });

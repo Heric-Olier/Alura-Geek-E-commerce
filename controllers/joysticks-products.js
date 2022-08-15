@@ -1,4 +1,6 @@
-const joysticksProducts = document.querySelector(".container__carousel-products-template-joysticks"); // template de los productos de joysticks
+const joysticksProducts = document.querySelector(
+  ".container__carousel-products-template-joysticks"
+); // template de los productos de joysticks
 const cardTemplateJoy = document.querySelector("#card__template").content;
 
 async function getTypeProductsJoy(typeProduct) {
@@ -51,7 +53,10 @@ async function showJoysticksProducts() {
   } catch (error) {
     console.log(error);
   } finally {
-    joysticksCarousel();
+    const urlPage = window.location.pathname;
+    if (urlPage === "/index.html") {
+      joysticksCarousel();
+    }
   }
 }
 

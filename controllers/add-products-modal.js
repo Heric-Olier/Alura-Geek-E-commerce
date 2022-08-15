@@ -1,6 +1,6 @@
 const btnAddProducts = document.querySelector(".products__btn-add-products");
 const addProductsModal = document.querySelector(".add-product__area");
-const canvasOverlayBlur = document.querySelector(".canvas__overlay-blur");
+const canvasOverlayBlur = document.querySelector(".canvas__overlay-blur-modal");
 const btnCloseAddProductsModal = document.querySelector(".btn__close-add-product-area");
 
 const showAddProductsModal = () => {
