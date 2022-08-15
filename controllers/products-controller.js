@@ -1,6 +1,5 @@
 // const productDescription = document.querySelector(".product__description");
 
-
 const newProducts = document.querySelector(
   ".container__carousel-products-template"
 ); //template de los productos nuevos
@@ -74,10 +73,7 @@ async function showProducts() {
   } catch (error) {
     console.log(error);
   } finally {
-    const urlPage = window.location.pathname;
-    if (urlPage === "/index.html") {
-      newProductsCarousel();
-    }
+    newProductsCarousel();
   }
 }
 

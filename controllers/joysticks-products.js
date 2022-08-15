@@ -53,10 +53,10 @@ async function showJoysticksProducts() {
   } catch (error) {
     console.log(error);
   } finally {
-    const urlPage = window.location.pathname;
-    if (urlPage === "/index.html") {
-      joysticksCarousel();
-    }
+    // const urlPage = window.location.pathname;
+    // if (urlPage === "/index.html") {
+    // }
+    joysticksCarousel();
   }
 }
 

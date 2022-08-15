@@ -45,9 +45,7 @@ async function showConsoleProducts() {
       card.querySelector(".products__template-price").textContent = price;
       card.querySelector("img").src = imageUrl;
       card.querySelector(".btn__product-card").dataset.id = id;
-  
 
-      
       fragment.appendChild(card);
     });
 
@@ -56,10 +54,7 @@ async function showConsoleProducts() {
   } catch (error) {
     console.log(error);
   } finally {
-    const urlPage = window.location.pathname;
-    if (urlPage === "/index.html") {
-      consolesCarousel();
-    }
+    consolesCarousel();
   }
 }
 
