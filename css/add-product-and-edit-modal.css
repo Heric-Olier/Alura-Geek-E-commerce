@@ -19,7 +19,8 @@ body {
   font-weight: 400;
 }
 
-.add-product__area {
+.add-product__area,
+.edit-product__area {
   padding: 40px 40px;
   width: 28rem;
   height: 47rem;
@@ -41,11 +42,13 @@ body {
   transition: all 0.3s ease;
 }
 
-.add-product__area.active {
+.add-product__area.active,
+.edit-product__area.active {
   transform: scale(1);
 }
 
-.add-product__area-content {
+.add-product__area-content,
+.edit-product__area-content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -56,7 +59,8 @@ body {
   transition: all 0.9s ease;
 }
 
-.add-product__area-content-title {
+.add-product__area-content-title,
+.edit-product__area-content-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -68,7 +72,8 @@ body {
   margin-bottom: 20px;
 }
 
-.btn__close-add-product-area {
+.btn__close-add-product-area,
+.btn__close-edit-product-area {
   width: 26px;
   height: 26px;
   font-size: 22px;
@@ -82,12 +87,14 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.btn__close-add-product-area:hover {
+.btn__close-add-product-area:hover,
+.btn__close-edit-product-area:hover {
   background-color: var(--secondary-black);
   transform: rotate(360deg);
 }
 
-.add-product__area-content-form {
+.add-product__area-content-form,
+.edit-product__area-content-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -178,12 +185,14 @@ textarea::placeholder {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--gray-light);
 }
 
 .add-product__area-content-form input,
+.edit-product__area-content-form input,
 select {
   width: 100%;
-  height: 44px;
+  height: 54px;
   border-radius: 4px;
   padding: 0 10px;
   font-size: 16px;
@@ -192,19 +201,23 @@ select {
   transition: all 0.3s ease-in-out;
 }
 
-.add-product__area-content-form input:focus {
+.add-product__area-content-form input:focus,
+.edit-product__area-content-form input:focus {
   border: 1px solid var(--primary-red);
 }
 
-.add-product__area-content-form input::placeholder {
+.add-product__area-content-form input::placeholder,
+.edit-product__area-content-form input::placeholder {
   color: var(--gray);
 }
 
-.add-product__area-content-btn {
-  width: 70%;
+.add-product__area-content-btn,
+.edit-product__area-content-btn {
+  width: 100%;
 }
 
-.add-product__area-content-btn button {
+.add-product__area-content-btn button,
+.edit-product__area-content-btn button {
   width: 100%;
   height: 44px;
   border: none;
@@ -218,7 +231,8 @@ select {
   transition: all 0.3s ease-in-out;
 }
 
-.add-product__area-content-btn button:hover {
+.add-product__area-content-btn button:hover,
+.edit-product__area-content-btn button:hover {
   background-color: var(--gray-light);
   border: 2px solid var(--primary-red);
   color: var(--primary-red);
@@ -240,4 +254,18 @@ select {
 .canvas__overlay-blur-modal.active {
   opacity: 1;
   visibility: visible;
+}
+
+.error__message {
+  display: none;
+  color: var(--primary-red);
+  font-weight: 500;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.error__message.active {
+  display: block;
+  opacity: 1;
 }

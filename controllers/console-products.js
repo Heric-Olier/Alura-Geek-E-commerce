@@ -59,15 +59,3 @@ async function showConsoleProducts() {
 }
 
 showConsoleProducts();
-
-// creamos una funcion para eliminar los productos desde ek servidor
-
-// creamos una funcion para eliminar los productos con el boton de eliminar
-
-// btnRemove.forEach((btn) => {
-//   btn.addEventListener("click", async (event) => {
-//     const id = event.target.dataset.id;
-//     const products = await removeProduct(id);
-//     console.log(products);
-//   });
-// });

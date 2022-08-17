@@ -1,7 +1,7 @@
-console.log("texto");
-
 const allProductsContainer = document.querySelector(".all-products-cards"); //template de los productos nuevos
 const cardTemplate = document.querySelector("#card__template").content;
+const editProductModal = document.querySelector(".edit-product__area");
+const btnEdit = document.querySelectorAll(".btn-edit");
 
 //creamos una funcion para traer los datos de todos los articulos desde la api json
 
@@ -36,6 +36,33 @@ const removeProduct = async (id) => {
   }
 };
 
+const editProduct = async (id, name, price, imageUrl) => {
+  try {
+    console.log(id);
+    const res = await fetch(
+      `https://alura-geek-fake-appi-server.herokuapp.com/products/${id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          price,
+          imageUrl,
+        }),
+      }
+    );
+    console.log(res);
+    // const products = await response.json();
+    // return products;
+  } catch (error) {
+    console.log(error);
+  } finally {
+    // window.location.reload();
+  }
+};
+
 const urlPage = window.location.pathname;
 
 async function showAllProducts() {
@@ -57,15 +84,18 @@ async function showAllProducts() {
 
       const allProductsPage = window.location.pathname;
       console.log(allProductsPage);
-     
-        const btnRemove = card.querySelector(".btn-remove");
-        const btnEdit = card.querySelector(".btn-edit");
 
-        card.querySelector(".btn-remove").addEventListener("click", () => {
-          removeProduct(btnRemove.dataset.id);
-        });
-        card.querySelector(".btn-edit").addEventListener("click", () => {});
-      
+      const btnRemove = card.querySelector(".btn-remove");
+      const btnEdit = card.querySelector(".btn-edit");
+
+      card.querySelector(".btn-remove").addEventListener("click", () => {
+        removeProduct(btnRemove.dataset.id);
+      });
+      card.querySelector(".btn-edit").addEventListener("click", () => {
+     
+        console.log(btnEdit.dataset.id);
+      });
+
       fragment.appendChild(card);
     });
 
@@ -78,4 +108,4 @@ async function showAllProducts() {
   }
 }
 
-  showAllProducts();
+showAllProducts();

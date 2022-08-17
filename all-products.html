@@ -45,7 +45,7 @@
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/login.css" />
     <link rel="stylesheet" href="css/products.css" />
-    <link rel="stylesheet" href="css/add-product-modal.css" />
+    <link rel="stylesheet" href="css/add-product-and-edit-modal.css" />
     <link rel="stylesheet" href="css/all-products.css" />
     <link rel="stylesheet" href="css/modal-products-description.css" />
     <link rel="stylesheet" href="css/footer.css" />
@@ -99,7 +99,6 @@
 
     <main>
       <!-- Add Product Modal Area -->
-
       <div class="add-product__area">
         <div class="add-product__area-content">
           <div class="add-product__area-content-title">
@@ -109,13 +108,14 @@
             </div>
           </div>
           <div class="add-product__area-content-form">
-            <form action="">
+            <form action="" data-form>
               <div class="form-group">
                 <label for="name"></label>
                 <input
                   type="text"
                   id="name"
                   placeholder="Nombre del producto"
+                  data-name
                 />
               </div>
               <div class="form-group">
@@ -126,6 +126,7 @@
                   cols="30"
                   rows="10"
                   placeholder="Descripción"
+                  data-description
                 ></textarea>
               </div>
               <div class="form-group">
@@ -134,11 +135,8 @@
                   type="text"
                   id="price"
                   placeholder="Precio del producto"
+                  data-price
                 />
-              </div>
-              <div class="form-group">
-                <label for="image">Imagen Local</label>
-                <input type="file" id="image" />
               </div>
               <div class="form-group">
                 <label for="image"></label>
@@ -146,29 +144,113 @@
                   type="text"
                   id="image-url"
                   placeholder="URL de la imagen"
+                  data-image
                 />
               </div>
               <div class="form-group">
                 <label for="category">Categoría</label>
-                <select name="category" id="category">
-                  <option value="1">Consolas</option>
-                  <option value="2">Joysticks</option>
-                  <option value="3">Sonido</option>
-                  <option value="4">Varios</option>
+                <select name="category" id="category" data-category>
+                  <option value="Consoles">Consolas</option>
+                  <option value="Joysticks">Joysticks</option>
+                  <option value="Sounds">Sonido</option>
+                  <option value="Various">Varios</option>
                 </select>
               </div>
+              <h2 class="error__message">error</h2>
+              <div class="add-product__area-content-btn">
+                <button
+                  class="btn-add-product"
+                  id="btn__add-product"
+                  type="submit"
+                >
+                  Agregar Producto
+                </button>
+              </div>
             </form>
-          </div>
-          <div class="add-product__area-content-btn">
-            <button class="btn-add-product">Agregar Producto</button>
           </div>
         </div>
       </div>
       <!-- end Add Product Modal Area -->
 
+      <!-- Edit Product Modal Area -->
+      <div class="edit-product__area">
+        <div class="edit-product__area-content">
+          <div class="edit-product__area-content-title">
+            <h2>Editar producto</h2>
+            <div class="btn__close-edit-product-area">
+              <i class="fas fa-times"></i>
+            </div>
+          </div>
+          <div class="edit-product__area-content-form">
+            <form action="" data-form-edit>
+              <div class="form-group">
+                <label for="name"></label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Nombre del producto"
+                  data-name
+                />
+              </div>
+              <div class="form-group">
+                <label for="description"></label>
+                <textarea
+                  name="description"
+                  id="description"
+                  cols="30"
+                  rows="10"
+                  placeholder="Descripción"
+                  data-description
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="price"></label>
+                <input
+                  type="text"
+                  id="price"
+                  placeholder="Precio del producto"
+                  data-price
+                />
+              </div>
+              <div class="form-group">
+                <label for="image"></label>
+                <input
+                  type="text"
+                  id="image-url"
+                  placeholder="URL de la imagen"
+                  data-image
+                />
+              </div>
+              <div class="form-group">
+                <label for="category">Categoría</label>
+                <select name="category" id="category" data-category>
+                  <option value="Consoles">Consolas</option>
+                  <option value="Joysticks">Joysticks</option>
+                  <option value="Sounds">Sonido</option>
+                  <option value="Various">Varios</option>
+                </select>
+              </div>
+              <h2 class="error__message">error</h2>
+              <div class="edit-product__area-content-btn">
+                <button
+                  class="btn-edit-product"
+                  id="btn__edit-product"
+                  type="submit"
+                >
+                  Editar Producto
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- end Edit Product Modal Area -->
+
       <!-- All Products Area -->
       <section class="products">
-        <!-- products Area - Consolas -->
+        <div class="allprodutcs__main-title">
+          <h2>Menu Administrador</h2>
+        </div>
         <div class="products-title">
           <h2>Todos los Productos</h2>
           <div class="products__btn-add-products">
@@ -344,8 +426,10 @@
 
     <!-- start script Area -->
     <script src="js/products-description.js"></script>
-    <script src="controllers/add-products-modal.js"></script>
+    <!-- <script type="module" src="js/login-validation.js"></script> -->
+    <script type="module" src="js/alerts.js"></script>
     <script src="controllers/all-products.js"></script>
+    <script type="module" src="controllers/add-product.js"></script>
     <script src="js/script.js"></script>
 
     <!-- End script  Area -->

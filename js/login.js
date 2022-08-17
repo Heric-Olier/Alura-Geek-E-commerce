@@ -35,3 +35,4 @@ canvasOverlayBlur.addEventListener("click", () => {
   clearFields();
   errorMessage.classList.remove("active");
 });
+

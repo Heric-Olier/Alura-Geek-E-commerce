@@ -30,15 +30,17 @@ const login = async (email, password) => {
     );
     const data = await response.json();
 
+    getUser();
     data.forEach((user) => {
       const { email: userEmail, password: userPassWord } = user;
       if (email === userEmail && password === userPassWord) {
-        console.log("Usuario logeado");
+        setUser(user);
+        addUserIcon();
+        showMessageError("Usuario logeado");
         setTimeout(() => {
-          showMessageError("Usuario logeado");
-          setUser(user);
           window.location = "./all-products.html";
-        }, 2500);
+        }, 1800);
+        btnUserContainer.classList.add("active");
         return true;
       } else {
         showMessageError("Email o contraseña incorrectos");
@@ -75,6 +77,7 @@ loginForm.addEventListener("submit", (e) => {
 // creamos una funcion para agregar el icono de usuario al boton de login
 const addUserIcon = () => {
   const user = getUser();
+  const urlPage = window.location.pathname;
   if (user) {
     btnUserContainer.classList.add("active");
     if (btnUserContainer.classList.contains("active")) {
@@ -82,13 +85,12 @@ const addUserIcon = () => {
         window.location = "./all-products.html";
       });
     }
-    if (!user)
-      if (window.open.location.pathname === "/all-products.html") {
-        alert("Bienvenido");
-      }
+
+    if (!user && urlPage === "./all-products.html") {
+      showMessageError("Por favor, inicie sesión");
+    }
   }
 };
 addUserIcon();
 
 // creamos una funcion para agergar el contenedor de los botonoes de editar y eliminar
-

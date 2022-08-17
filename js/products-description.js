@@ -55,23 +55,22 @@ async function showProducts(id) {
     // window.location.reload();
   }
 }
-
-const showProductDescription = (event) => {
-  const idProduct = event.target.parentElement.dataset.id;
+const toggleDescription = () => {
   productDescription.classList.toggle("active");
   overlayCanvasBlur.classList.toggle("active");
   modalProductDescription.classList.toggle("active");
+};
+
+const showProductDescription = (event) => {
+  const idProduct = event.target.parentElement.dataset.id;
+  toggleDescription();
   showProducts(idProduct);
 };
 
 btncCloseProductDescription.addEventListener("click", () => {
-  productDescription.classList.toggle("active");
-  overlayCanvasBlur.classList.toggle("active");
-  modalProductDescription.classList.toggle("active");
+  toggleDescription();
 });
 
 overlayCanvasBlur.addEventListener("click", () => {
-  overlayCanvasBlur.classList.toggle("active");
-  productDescription.classList.toggle("active");
-  modalProductDescription.classList.toggle("active");
+  toggleDescription();
 });
