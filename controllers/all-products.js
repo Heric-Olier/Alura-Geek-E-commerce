@@ -2,6 +2,18 @@ const allProductsContainer = document.querySelector(".all-products-cards"); //te
 const cardTemplate = document.querySelector("#card__template").content;
 const editProductModal = document.querySelector(".edit-product__area");
 const btnEdit = document.querySelectorAll(".btn-edit");
+const btnCloseEditProductsModal = document.querySelector(".btn__close-edit-product-area");
+const canvasOverlayBlurEdit = document.querySelector(".canvas__overlay-blur-modal");
+
+btnCloseEditProductsModal.addEventListener("click", () => {
+  editProductModal.classList.remove("active");
+  canvasOverlayBlurEdit.classList.remove("active");
+});
+
+canvasOverlayBlurEdit.addEventListener("click", () => {
+  editProductModal.classList.remove("active");
+  canvasOverlayBlurEdit.classList.remove("active");
+});
 
 //creamos una funcion para traer los datos de todos los articulos desde la api json
 
@@ -36,7 +48,7 @@ const removeProduct = async (id) => {
   }
 };
 
-const editProduct = async (id, name, price, imageUrl) => {
+const editProduct = async (id, name, price, imageUrl, description) => {
   try {
     console.log(id);
     const res = await fetch(
@@ -50,6 +62,7 @@ const editProduct = async (id, name, price, imageUrl) => {
           name,
           price,
           imageUrl,
+          description,
         }),
       }
     );
@@ -92,7 +105,14 @@ async function showAllProducts() {
         removeProduct(btnRemove.dataset.id);
       });
       card.querySelector(".btn-edit").addEventListener("click", () => {
-     
+        // const nameProduct = document.querySelector("[data-name-edit]").value;
+        // const descriptionProduct = document.querySelector("[data-description-edit]").value;
+        // const priceProduct = document.querySelector("[data-price-edit]").value;
+        // const imageProduct = document.querySelector("[data-image-edit]").value;
+        // const categoryProduct = document.querySelector("[data-category-edit]").value;
+        editProductModal.classList.toggle("active");
+        canvasOverlayBlurEdit.classList.toggle("active");
+        editProduct( btnEdit.dataset.id, name, price, imageUrl, description, category);
         console.log(btnEdit.dataset.id);
       });
 

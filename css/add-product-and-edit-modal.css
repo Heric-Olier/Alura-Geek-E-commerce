@@ -24,7 +24,7 @@ body {
   padding: 40px 40px;
   width: 28rem;
   height: 47rem;
-  position: absolute;
+  position: fixed;
   margin: -5% auto;
   background-color: var(--background-white);
   box-shadow: 0 7px 20px rgba(0, 0, 0, 0.151);
@@ -149,6 +149,7 @@ textarea {
   height: 100px;
   border-radius: 6px;
   border: none;
+  resize: none;
   background-color: var(--gray-light);
   font-family: var(--font-poppins);
   color: var(--secondary-black);
