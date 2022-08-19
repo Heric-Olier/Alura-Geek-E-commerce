@@ -154,6 +154,7 @@
                   <option value="Joysticks">Joysticks</option>
                   <option value="Sounds">Sonido</option>
                   <option value="Various">Varios</option>
+                  <option value="NewProduct">Nuevos Productos</option>
                 </select>
               </div>
               <h2 class="error__message">error</h2>
@@ -223,11 +224,12 @@
               </div>
               <div class="form-group">
                 <label for="category">Categoría</label>
-                <select name="category" id="category" data-category>
+                <select name="category" id="category" data-category-edit>
                   <option value="Consoles">Consolas</option>
                   <option value="Joysticks">Joysticks</option>
                   <option value="Sounds">Sonido</option>
                   <option value="Various">Varios</option>
+                  <option value="NewProduct">Nuevos Productos</option>
                 </select>
               </div>
               <h2 class="error__message">error</h2>
@@ -247,8 +249,8 @@
       <!-- end Edit Product Modal Area -->
 
       <!-- All Products Area -->
-      <section class="products">
-        <div class="allprodutcs__main-title">
+      <section class="all-products">
+        <div class="all-produtcs__main-title">
           <h2>Menu Administrador</h2>
         </div>
         <div class="products-title">
@@ -268,7 +270,7 @@
                 Consola Nintendo Switch
               </h3>
               <h2 class="products__template-price">$600.00</h2>
-              <div class="card__hide-content">
+              <div class="card__hide-content hide-content-all-prod">
                 <button
                   class="btn__product-card"
                   onclick="showProductDescription(event)"
@@ -426,7 +428,7 @@
 
     <!-- start script Area -->
     <script src="js/products-description.js"></script>
-    <!-- <script type="module" src="js/login-validation.js"></script> -->
+    <script type="module" src="js/login-validation.js"></script>
     <!-- <script src="controllers/edit-products.js"></script> -->
     <script type="module" src="js/alerts.js"></script>
     <script src="controllers/all-products.js"></script>
@@ -436,3 +438,4 @@
     <!-- End script  Area -->
   </body>
 </html>
+

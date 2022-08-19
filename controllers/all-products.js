@@ -2,8 +2,15 @@ const allProductsContainer = document.querySelector(".all-products-cards"); //te
 const cardTemplate = document.querySelector("#card__template").content;
 const editProductModal = document.querySelector(".edit-product__area");
 const btnEdit = document.querySelectorAll(".btn-edit");
-const btnCloseEditProductsModal = document.querySelector(".btn__close-edit-product-area");
-const canvasOverlayBlurEdit = document.querySelector(".canvas__overlay-blur-modal");
+const btnCloseEditProductsModal = document.querySelector(
+  ".btn__close-edit-product-area"
+);
+const canvasOverlayBlurEdit = document.querySelector(
+  ".canvas__overlay-blur-modal"
+);
+const btnEditPut = document.getElementById("btn__edit-product");
+
+let idProduct;
 
 btnCloseEditProductsModal.addEventListener("click", () => {
   editProductModal.classList.remove("active");
@@ -48,8 +55,23 @@ const removeProduct = async (id) => {
   }
 };
 
-const editProduct = async (id, name, price, imageUrl, description) => {
+const editProduct = async (
+  id,
+  name,
+  price,
+  imageUrl,
+  description,
+  category
+) => {
   try {
+    const product = {
+      name: name,
+      price: price,
+      description: description,
+      imageUrl: imageUrl,
+      category: category,
+      id: id,
+    };
     console.log(id);
     const res = await fetch(
       `https://alura-geek-fake-appi-server.herokuapp.com/products/${id}`,
@@ -58,12 +80,7 @@ const editProduct = async (id, name, price, imageUrl, description) => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          name,
-          price,
-          imageUrl,
-          description,
-        }),
+        body: JSON.stringify(product),
       }
     );
     console.log(res);
@@ -72,9 +89,48 @@ const editProduct = async (id, name, price, imageUrl, description) => {
   } catch (error) {
     console.log(error);
   } finally {
-    // window.location.reload();
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000);
   }
 };
+
+const drawDataForm = async (id) => {
+  try {
+    const form = document.querySelector("[data-form-edit]");
+
+    const response = await fetch(
+      `https://alura-geek-fake-appi-server.herokuapp.com/products?id=${id}`
+    );
+    const products = await response.json();
+    console.log(products);
+    const { name, price, imageUrl, description, category } = products[0];
+    idProduct = id;
+
+    form.querySelector("[data-name-edit]").value = name;
+    form.querySelector("[data-price-edit]").value = price;
+    form.querySelector("[data-image-edit]").value = imageUrl;
+    form.querySelector("[data-description-edit]").value = description;
+    form.querySelector("[data-category-edit]").value = category;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+btnEditPut.addEventListener("click", (e) => {
+  e.preventDefault();
+  const form = document.querySelector("[data-form-edit]");
+  const id = idProduct;
+  const name = form.querySelector("[data-name-edit]").value;
+  const price = form.querySelector("[data-price-edit]").value;
+  const imageUrl = form.querySelector("[data-image-edit]").value;
+  const description = form.querySelector("[data-description-edit]").value;
+  const categoryOption = form.querySelector("[data-category-edit]");
+  const category = categoryOption.options[categoryOption.selectedIndex].value;
+  console.log(category);
+
+  editProduct(id, name, price, imageUrl, description, category);
+});
 
 const urlPage = window.location.pathname;
 
@@ -105,15 +161,11 @@ async function showAllProducts() {
         removeProduct(btnRemove.dataset.id);
       });
       card.querySelector(".btn-edit").addEventListener("click", () => {
-        // const nameProduct = document.querySelector("[data-name-edit]").value;
-        // const descriptionProduct = document.querySelector("[data-description-edit]").value;
-        // const priceProduct = document.querySelector("[data-price-edit]").value;
-        // const imageProduct = document.querySelector("[data-image-edit]").value;
-        // const categoryProduct = document.querySelector("[data-category-edit]").value;
         editProductModal.classList.toggle("active");
         canvasOverlayBlurEdit.classList.toggle("active");
-        editProduct( btnEdit.dataset.id, name, price, imageUrl, description, category);
-        console.log(btnEdit.dataset.id);
+        drawDataForm(btnEdit.dataset.id);
+        // editProduct( btnEdit.dataset.id, name, price, imageUrl, description, category);
+        // console.log(btnEdit.dataset.id);
       });
 
       fragment.appendChild(card);

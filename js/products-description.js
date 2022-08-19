@@ -1,20 +1,10 @@
 const productDescription = document.querySelector(".product__description");
-const productDescriptionModal = document.querySelector(
-  ".modal__product-description"
-);
-const overlayCanvasBlur = document.querySelector(
-  ".canvas__overlay-blur-product-description"
-);
-const btncCloseProductDescription = document.querySelector(
-  ".product__description-btn-close"
-);
+const productDescriptionModal = document.querySelector(".modal__product-description");
+const overlayCanvasBlur = document.querySelector(".canvas__overlay-blur-product-description");
+const btncCloseProductDescription = document.querySelector(".product__description-btn-close");
 const btnAddToFavorite = document.querySelector(".add-favorites");
-const templateModal = document.querySelector(
-  "#template__card-description"
-).content;
-const modalProductDescription = document.querySelector(
-  ".modal__product-description"
-);
+const templateModal = document.querySelector("#template__card-description").content;
+const modalProductDescription = document.querySelector(".modal__product-description");
 
 async function showProducts(id) {
   try {
@@ -28,13 +18,9 @@ async function showProducts(id) {
 
     products.forEach(({ name, price, imageUrl, description }) => {
       const card = templateModal.cloneNode(true);
-      card.querySelector(".product__description-content-title").textContent =
-        name;
-      card.querySelector(".product__description-content-price").textContent =
-        price;
-      card.querySelector(
-        ".product__description-content-description"
-      ).textContent = description;
+      card.querySelector(".product__description-content-title").textContent = name;
+      card.querySelector(".product__description-content-price").textContent = price;
+      card.querySelector(".product__description-content-description").textContent = description;
       card.querySelector("img").src = imageUrl;
 
       const favoriteItem = card.querySelector(".add-favorites");

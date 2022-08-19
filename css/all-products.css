@@ -19,6 +19,35 @@ body {
   font-weight: 400;
 }
 
+.all-products-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: minmax(400px, auto);
+  grid-auto-flow: dense;
+  grid-column-gap: 20px;
+  grid-row-gap: 100px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+/* .products__template-content-card:hover .card__hide-content {
+  margin-top: 12px;
+} */
+
+.products__template-content-card {
+  height: auto;
+}
+
+/* .card__hide-content {
+  top: initial;
+  bottom: 0;
+  transform: translateY(-12px);
+} */
+
+.products__template-content-card:hover .card__hide-content {
+  z-index: 1;
+}
+
 .new__products-title,
 .products-title,
 .joysticks-title,
@@ -29,13 +58,13 @@ body {
   padding: 0 100px; */
 }
 
-.allprodutcs__main-title {
+.all-produtcs__main-title {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.allprodutcs__main-title h2 {
+.all-produtcs__main-title h2 {
   font-size: 24px;
   font-weight: 700;
   color: var(--primary-red);
@@ -47,11 +76,11 @@ body {
   display: flex;
   justify-content: space-between;
   max-width: 100%;
-  padding: 0 100px;
+  padding: 0 20px;
 }
 
-.products {
-  padding-top: 80px;
+.all-products {
+  padding: 80px 60px;
 }
 
 .products__btn-add-products {
@@ -105,6 +134,10 @@ body {
   margin: 0 auto;
 }
 
+.products__template-price {
+  margin-bottom: 40px;
+}
+
 .main-btns-edit-remove {
   display: flex;
   justify-content: center;
@@ -112,6 +145,9 @@ body {
   width: 100%;
   height: 40px;
   border: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
   background-color: var(--gray-light);
   font-family: var(--font-poppins);
   font-size: 16px;
@@ -135,33 +171,4 @@ body {
 .btn-remove:hover {
   transform: scale(1.2);
   color: var(--primary-red);
-}
-
-.all-products-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-auto-rows: minmax(400px, auto);
-  grid-auto-flow: dense;
-  grid-column-gap: 20px;
-  grid-row-gap: 100px;
-  margin-top: 30px;
-}
-
-.products__template-content-card:hover .card__hide-content {
-  margin-top: 12px;
-}
-
-.products__template-content-card {
-  height: auto;
-}
-
-.card__hide-content {
-  top: initial;
-  bottom: 0;
-  z-index: 1;
-  transform: translateY(-60px);
-}
-
-.products__template-content-card:hover .card__hide-content {
-  transform: translateY(60px);
 }
