@@ -88,6 +88,7 @@ const addUserIcon = () => {
 
     if (!user && urlPage === "./all-products.html") {
       showMessageError("Por favor, inicie sesión");
+      
     }
   }
 };
