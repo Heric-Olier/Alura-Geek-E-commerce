@@ -18,18 +18,24 @@ async function getTypeProducts(typeProduct) {
 const consolesCarousel = () => {
   tns({
     container: ".consoles-products__carousel-content",
-    items: 4,
+    items: 3,
     slideBy: 1,
     autoplay: true,
+    controls: false,
     nav: false,
     autoplayButtonOutput: false,
     autoplayTimeout: 5000,
     autoplayButton: false,
     loop: true,
     mouseDrag: true,
-    controls: false,
+    responsive: {
+      980: {
+        items: 4,
+      },
+    },
   });
 };
+
 
 async function showConsoleProducts() {
   try {

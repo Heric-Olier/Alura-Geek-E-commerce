@@ -35,11 +35,11 @@
     grid-gap: 34px;
   }
 
-  .new-products__carousel-content,
+  /* .new-products__carousel-content,
   .consoles-products__carousel-content,
   .joysticks-products__carousel-content,
   .sounds-products__carousel-content,
   .various-products__carousel-content {
     height: 22rem;
-  }
+  } */
 }

@@ -18,7 +18,7 @@ async function getTypeProductsSounds(typeProduct) {
 const soundsCarousel = () => {
   tns({
     container: ".sounds-products__carousel-content",
-    items: 4,
+    items: 3,
     slideBy: 1,
     autoplay: true,
     controls: false,
@@ -28,8 +28,14 @@ const soundsCarousel = () => {
     autoplayButton: false,
     loop: true,
     mouseDrag: true,
+    responsive: {
+      980: {
+        items: 4,
+      },
+    },
   });
 };
+
 
 async function showSoundsProducts() {
   try {

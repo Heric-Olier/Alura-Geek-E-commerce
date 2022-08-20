@@ -1,9 +1,8 @@
-
 const newProducts = document.querySelector(
   ".container__carousel-products-template"
-  ); //template de los productos nuevos
-  
-  const productDescription = document.querySelector(".product__description");
+); //template de los productos nuevos
+
+const productDescription = document.querySelector(".product__description");
 const cardTemplate = document.querySelector("#card__template").content;
 
 //creamos una funcion para traer los datos de todos los articulos desde la api json
@@ -37,7 +36,7 @@ async function getTypeProducts(typeProduct) {
 const newProductsCarousel = () => {
   tns({
     container: ".new-products__carousel-content",
-    items: 4,
+    items: 3,
     slideBy: 1,
     autoplay: true,
     controls: false,
@@ -47,6 +46,11 @@ const newProductsCarousel = () => {
     autoplayButton: false,
     loop: true,
     mouseDrag: true,
+    responsive: {
+      980: {
+        items: 4,
+      },
+    },
   });
 };
 

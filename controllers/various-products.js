@@ -18,7 +18,7 @@ async function getTypeProductsVarious(typeProduct) {
 const variousCarousel = () => {
   tns({
     container: ".various-products__carousel-content",
-    items: 4,
+    items: 3,
     slideBy: 1,
     autoplay: true,
     controls: false,
@@ -28,8 +28,14 @@ const variousCarousel = () => {
     autoplayButton: false,
     loop: true,
     mouseDrag: true,
+    responsive: {
+      980: {
+        items: 4,
+      },
+    },
   });
 };
+
 
 async function showVariousProducts() {
   try {
