@@ -24,7 +24,7 @@ body {
 /*! <--------- New Products Section --------->*/
 
 .new__products {
-  padding: 40px 18px;
+  padding: 40px 10px;
   width: 100%;
   background-color: var(--background-white);
   margin: 0 auto;
@@ -34,7 +34,7 @@ body {
 .joysticks,
 .sounds,
 .various {
-  padding: 20px 18px;
+  padding: 20px 10px;
   width: 100%;
   background-color: var(--background-white);
   margin: 0 auto;

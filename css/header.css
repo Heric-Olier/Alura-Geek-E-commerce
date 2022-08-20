@@ -219,6 +219,10 @@ body {
   left: 0;
 }
 
+.nav__burguer {
+  display: none;
+}
+
 .container__carousel-banner {
   /* display: flex; */
   width: 100%;
@@ -317,7 +321,7 @@ body {
 /*! <--------- Features Section --------->*/
 
 .features {
-  padding: 40px 38px;
+  padding: 40px 30px;
   width: 100%;
   margin: 0 auto;
 }

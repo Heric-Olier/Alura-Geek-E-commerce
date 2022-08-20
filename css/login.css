@@ -32,17 +32,18 @@
     box-shadow: 0 7px 20px rgba(0, 0, 0, 0.151);
     z-index: 6;
     -webkit-overflow-scrolling: touch;
-    border-radius: 30px 30px 30px 0;
+    overflow-y: scroll;
+    border-radius: 0 30px 30px 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    transition: all 0.5s ease;
+    transition: all 0.35s ease;
   }
   
   .login__area.active {
     left: 0;
-    transition: all 0.55s ease;
+    transition: all 0.35s ease;
   }
   
   .canvas__overlay-blur {
@@ -76,12 +77,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: all 1s ease;
+    transition: all 0.55s ease;
   }
   
   .login__area-content.active {
     left: 0;
-    transition: all 1s ease;
+    transition: all 0.55s ease;
   }
   
   .login__area-content-logo {
