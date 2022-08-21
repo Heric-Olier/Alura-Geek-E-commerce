@@ -64,31 +64,6 @@ const createProduct = (
     });
 };
 
-// const editProduct = (id, name, price, imageUrl, description) => {
-//   fetch(`https://alura-geek-fake-appi-server.herokuapp.com/products/${id}`, {
-//     method: "PUT",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify({
-//       name,
-//       price,
-//       imageUrl,
-//       description,
-//     }),
-//   })
-//     .then((res) => {
-//       console.log(res);
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//     })
-//     .finally(() => {
-//       window.location.reload();
-//     });
-// };
-
-
   formAddProduct.addEventListener("submit", (event) => {
     const regexImage =
       /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/;

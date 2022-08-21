@@ -177,8 +177,8 @@ body {
   align-items: center;
   justify-content: center;
   margin-left: 30px;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   cursor: pointer;
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
@@ -186,12 +186,17 @@ body {
 
 .btn-user-container.active {
   margin-left: 40px;
-  border: 2px solid var(--secondary-black);
   background-color: var(--primary-red);
 }
 
 .btn-user-container:hover {
   transform: scale(1.15);
+}
+
+.nav__menu-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav__menu ul li a:after,
@@ -217,6 +222,12 @@ body {
 .sounds-title span:hover:after {
   width: 100%;
   left: 0;
+}
+
+.nav__menu-user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav__burguer {
