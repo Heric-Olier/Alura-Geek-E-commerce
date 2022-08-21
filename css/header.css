@@ -186,7 +186,7 @@ body {
 
 .btn-user-container.active {
   margin-left: 40px;
-  background-color: var(--primary-red);
+  background-color: #f76466;
 }
 
 .btn-user-container:hover {

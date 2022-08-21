@@ -45,6 +45,47 @@
     left: 0;
     transition: all 0.35s ease-in-out;
   }
+
+  .login__loading-area {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    background-color: rgba(219, 219, 219, 0.5);
+    z-index: 10;
+    transform: scale(0);
+    position: absolute;
+    top: 0;
+    transition: all 0.35s ease-in-out;
+  }
+
+  .login__loading-area.active {
+    transform: scale(1);
+
+  }
+
+
+  .login__loading-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .fa-circle-notch {
+    font-size: 3rem;
+    color: #f76466;
+    animation: fa-spin 1s infinite linear;
+  }
+
+  /* .login__loading-content-icon {
+    width: 50px;
+    height: 50px;
+    animation: loading 1s linear infinite;
+  } */
   
   .canvas__overlay-blur {
     position: fixed;

@@ -5,6 +5,7 @@ const errorMessage = document.querySelector(".error__message");
 const btnUserContainer = document.querySelector(".btn-user-container");
 const loginIcon = document.querySelector(".fa-user");
 const mainBtnEditRemove = document.querySelector(".main-btns-edit-remove");
+const loginLoadingArea = document.querySelector(".login__loading-area");
 
 export const showMessageError = (message) => {
   errorMessage.innerHTML = message;
@@ -36,10 +37,11 @@ const login = async (email, password) => {
       if (email === userEmail && password === userPassWord) {
         setUser(user);
         addUserIcon();
-        showMessageError("Usuario logeado");
         setTimeout(() => {
           window.location = "./all-products.html";
+          loginLoadingArea.classList.remove("active");
         }, 1800);
+        
         btnUserContainer.classList.add("active");
         return true;
       } else {
@@ -69,6 +71,7 @@ const validateLogin = () => {
 const loginForm = document.querySelector("form");
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
+  loginLoadingArea.classList.add("active");
   if (validateLogin()) {
     login(fieldEmail.value, fieldPassword.value);
   }
@@ -88,7 +91,6 @@ const addUserIcon = () => {
 
     if (!user && urlPage === "./all-products.html") {
       showMessageError("Por favor, inicie sesión");
-      
     }
   }
 };
