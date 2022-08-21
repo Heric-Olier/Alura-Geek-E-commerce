@@ -23,13 +23,14 @@ body {
 .edit-product__area {
   padding: 40px 40px;
   width: 28rem;
-  height: 47rem;
+  height: 43rem;
   position: fixed;
-  margin: -5% auto;
+  margin: 0 auto;
   background-color: var(--background-white);
   box-shadow: 0 7px 20px rgba(0, 0, 0, 0.151);
   z-index: 6;
-  overflow-y: scroll hidden;
+  overflow-y: scroll;
+  top: 4rem;
   left: 0;
   right: 0;
   transform: scale(0);

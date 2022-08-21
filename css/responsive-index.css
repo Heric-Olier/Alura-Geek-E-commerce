@@ -170,6 +170,14 @@
     right: -80rem;
   }
 
+  .add-product__area,
+  .edit-product__area {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 60px;
+  }
+
   .product__description-content-add {
     justify-content: space-between;
   }
@@ -270,6 +278,16 @@
 
   .product__description {
     padding: 26px;
+  }
+
+  .add-product__area,
+  .edit-product__area {
+    padding: 30px;
+  }
+
+  .add-product__area-content-title,
+  .edit-product__area-content-title {
+    font-size: 18px;
   }
 
   .product__description-content-image {
