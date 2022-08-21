@@ -18,7 +18,7 @@ async function getTypeProducts(typeProduct) {
 const consolesCarousel = () => {
   tns({
     container: ".consoles-products__carousel-content",
-    items: 3,
+    items: 1,
     slideBy: 1,
     autoplay: true,
     controls: false,
@@ -31,6 +31,14 @@ const consolesCarousel = () => {
     responsive: {
       980: {
         items: 4,
+      },
+
+      768: {
+        items: 3,
+      },
+
+      480: {
+        items: 2,
       },
     },
   });

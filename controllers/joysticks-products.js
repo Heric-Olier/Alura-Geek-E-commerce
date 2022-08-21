@@ -18,7 +18,7 @@ async function getTypeProductsJoy(typeProduct) {
 const joysticksCarousel = () => {
   tns({
     container: ".joysticks-products__carousel-content",
-    items: 3,
+    items: 1,
     slideBy: 1,
     autoplay: true,
     controls: false,
@@ -32,9 +32,18 @@ const joysticksCarousel = () => {
       980: {
         items: 4,
       },
+
+      768: {
+        items: 3,
+      },
+
+      480: {
+        items: 2,
+      },
     },
   });
 };
+
 
 
 async function showJoysticksProducts() {

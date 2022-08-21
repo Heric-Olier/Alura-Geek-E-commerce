@@ -140,12 +140,31 @@
     transition: all 0.5s;
   }
 
+  .container__carousel-banner {
+    max-width: 768px;
+  }
+
+  .banner__area-content {
+    flex-direction: column-reverse;
+  }
+
+  .banner__area-content-image,
+  .banner__area-content-text {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .banner__area-content-text-description {
+    color: #222222;
+  }
+
   .login__area {
     width: 100%;
     left: -80rem;
   }
 
   .product__description {
+    border-radius: 0;
     width: 100%;
     right: -80rem;
   }
@@ -156,11 +175,141 @@
 
   .footer {
     padding: 60px 36px;
-    height: 42rem;
+    height: 44rem;
   }
 
   .footer__content {
     height: 100%;
     grid-template-columns: 1fr 1fr;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .new-products__carousel-content,
+  .consoles-products__carousel-content,
+  .joysticks-products__carousel-content,
+  .sounds-products__carousel-content,
+  .various-products__carousel-content {
+    height: 26rem;
+  }
+
+  .products-title {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .products__btn-add-products {
+    width: 14rem;
+    margin-bottom: 2rem;
+  }
+
+  .all-produtcs__main-title h2 {
+    margin-bottom: 3rem;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .new-products__carousel-content,
+  .consoles-products__carousel-content,
+  .joysticks-products__carousel-content,
+  .sounds-products__carousel-content,
+  .various-products__carousel-content {
+    height: 32rem;
+  }
+
+  .product__description-btn-close,
+  .product__login-btn-close {
+    width: 34px;
+    height: 34px;
+  }
+
+  .product__login-btn-close {
+    margin: 0;
+  }
+
+  .all-products {
+    padding: 80px 30px;
+  }
+
+  .login__area-content-title {
+    font-size: 18px;
+  }
+
+  .description-btn-icon,
+  .login-btn-icon {
+    font-size: 26px;
+  }
+
+  .login__area-content-logo img {
+    width: 230px;
+  }
+
+  .login__area-content-form input,
+  .login__area-content-form button {
+    width: 80%;
+  }
+
+  .banner__area {
+    padding: 132px 26px;
+  }
+
+  .features__content {
+    grid-template-columns: 1fr;
+    grid-gap: 22px;
+  }
+
+  .new__products-title,
+  .products-title,
+  .joysticks-title,
+  .sounds-title,
+  .various-title {
+    justify-content: center;
+  }
+
+  .product__description {
+    padding: 26px;
+  }
+
+  .product__description-content-image {
+    height: 324px;
+  }
+
+  .modal__product-description {
+    display: block;
+    right: 0;
+  }
+
+  .modal__product-description.active {
+    right: 0;
+  }
+
+  .hot__deal {
+    height: 530px;
+  }
+
+  .text__content-countdown {
+    flex-wrap: wrap;
+  }
+
+  .hot__deal-text-content {
+    padding: 0 24px;
+  }
+
+  .hot__deal-text-content h2 {
+    font-size: 26px;
+  }
+
+  .hot__deal-text-content h3 {
+    font-size: 20px;
+  }
+
+  .footer {
+    height: 66rem;
+  }
+
+  .footer__content {
+    grid-template-columns: 1fr;
   }
 }

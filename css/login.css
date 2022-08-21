@@ -38,12 +38,12 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    transition: all 0.35s ease;
+    transition: all 0.35s ease-in-out;
   }
   
   .login__area.active {
     left: 0;
-    transition: all 0.35s ease;
+    transition: all 0.35s ease-in-out;
   }
   
   .canvas__overlay-blur {
@@ -77,12 +77,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: all 0.55s ease;
+    transition: all 0.55s ease-in-out;
   }
   
   .login__area-content.active {
     left: 0;
-    transition: all 0.55s ease;
+    transition: all 0.55s ease-in-out;
   }
   
   .login__area-content-logo {

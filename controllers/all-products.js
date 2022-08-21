@@ -139,8 +139,7 @@ async function showAllProducts() {
     const products = await getAllProducts();
 
     const fragment = document.createDocumentFragment();
-    // const div = document.createElement("div");
-    // div.classList.add("new-products__carousel-content");
+
 
     products.forEach(({ name, price, imageUrl, id }) => {
       const card = cardTemplate.cloneNode(true);

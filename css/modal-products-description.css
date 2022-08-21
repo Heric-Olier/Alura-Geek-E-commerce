@@ -38,12 +38,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: all 0.5s ease;
+    transition: all 0.45s ease-in-out;
   }
   
   .product__description.active {
     right: 0;
-    transition: all 0.5s ease;
+    transition: all 0.45s ease-in-out;
   }
   
   .modal__product-description {

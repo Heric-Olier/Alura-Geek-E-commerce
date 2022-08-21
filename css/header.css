@@ -226,7 +226,7 @@ body {
 .container__carousel-banner {
   /* display: flex; */
   width: 100%;
-  max-width: 1300px;
+  max-width: 1200px;
   /* align-items: center;
   justify-content: center; */
 }
@@ -241,7 +241,7 @@ body {
 .banner__area-content {
   display: inline-flex !important;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin: 0 auto;
 }
 
@@ -250,7 +250,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 38%;
+  width: 42%;
+  transition: all 0.3s ease 0s;
 }
 
 .banner__area-content-text-title {
@@ -311,6 +312,7 @@ body {
   justify-content: end;
   align-items: center;
   width: 54%;
+  transition: all 0.3s ease 0s;
 }
 
 .banner__area-content-image img {

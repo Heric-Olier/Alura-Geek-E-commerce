@@ -48,7 +48,7 @@ body {
 
 .footer__content-about p {
   line-height: 22px;
-  text-align: justify;
+  text-align: left;
   color: var(--gray);
   margin-bottom: 20px;
 }

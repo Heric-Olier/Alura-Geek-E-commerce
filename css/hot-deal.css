@@ -50,9 +50,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   align-items: center;
   width: 100%;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 .text__content-countdown,
@@ -77,8 +79,8 @@ body {
 
   position: relative;
   margin: 0 10px;
-  width: 110px;
-  height: 110px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   background-color: var(--primary-red);
   text-align: center;
@@ -114,4 +116,25 @@ body {
   font-weight: 500;
   font-family: var(--font-poppins);
   color: var(--secondary-black);
+}
+
+.btn-buy-now {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 40px;
+  background-color: var(--primary-red);
+  color: var(--background-white);
+  font-weight: 600;
+  font-family: var(--font-poppins);
+  margin-top: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-buy-now:hover {
+  background-color: #f76466;
 }
