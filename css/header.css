@@ -296,6 +296,7 @@ body {
   margin-right: 6px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  border: 2px solid #f76466;
 }
 
 .circle__cartshop:hover {
