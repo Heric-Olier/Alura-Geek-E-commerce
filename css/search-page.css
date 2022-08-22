@@ -1,0 +1,12 @@
+.products__btn-add-products {
+    display: none !important;
+}
+
+.main-btns-edit-remove {
+    display: none !important;
+}
+
+.products-title h2 {
+    font-size: 22px !important;
+    font-weight: 500 !important;
+}

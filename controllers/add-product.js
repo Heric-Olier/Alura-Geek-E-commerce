@@ -62,7 +62,7 @@ const createProduct = (
 
 formAddProduct.addEventListener("submit", (event) => {
   event.preventDefault();
-  alertSuccessAddProduct.classList.add("active");
+  alertSuccessAddProduct.classList.remove("active");
   const regexImage =
     /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/;
   const regexPrice = /^[0-9]+$/;
@@ -103,6 +103,7 @@ formAddProduct.addEventListener("submit", (event) => {
       imageProduct,
       categoryProduct
       );
+      alertSuccessAddProduct.classList.add("active");
     }
     
 });

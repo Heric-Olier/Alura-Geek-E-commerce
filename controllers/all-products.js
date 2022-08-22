@@ -2,16 +2,24 @@ const allProductsContainer = document.querySelector(".all-products-cards"); //te
 const cardTemplate = document.querySelector("#card__template").content;
 const editProductModal = document.querySelector(".edit-product__area");
 const btnEdit = document.querySelectorAll(".btn-edit");
-const btnCloseEditProductsModal = document.querySelector(".btn__close-edit-product-area");
-const canvasOverlayBlurEdit = document.querySelector(".canvas__overlay-blur-modal");
+const btnCloseEditProductsModal = document.querySelector(
+  ".btn__close-edit-product-area"
+);
+const canvasOverlayBlurEdit = document.querySelector(
+  ".canvas__overlay-blur-modal"
+);
 const btnEditPut = document.getElementById("btn__edit-product");
-const alertSuccessEditProduct = document.querySelector(".alert__success-edit-product");
+const alertSuccessEditProduct = document.querySelector(
+  ".alert__success-edit-product"
+);
 const alertRemoveProduct = document.querySelector(".alert__remove-product");
 const btnRemoveProduct = document.querySelector(".btn-remove-product");
-const btnCancelRemoveProduct = document.querySelector(".btn-cancel-remove-product");
-const alertSuccessRemoveProduct = document.querySelector(".alert__success-remove-product");
-
-
+const btnCancelRemoveProduct = document.querySelector(
+  ".btn-cancel-remove-product"
+);
+const alertSuccessRemoveProduct = document.querySelector(
+  ".alert__success-remove-product"
+);
 
 let idProduct;
 
@@ -28,8 +36,6 @@ canvasOverlayBlurEdit.addEventListener("click", () => {
 btnCancelRemoveProduct.addEventListener("click", () => {
   alertRemoveProduct.classList.remove("active");
 });
-
-
 
 //creamos una funcion para traer los datos de todos los articulos desde la api json
 
@@ -63,8 +69,7 @@ const removeProduct = async (id) => {
     setTimeout(() => {
       window.location.reload();
       alertSuccessRemoveProduct.classList.remove("active");
-    } , 2600);
-
+    }, 2600);
   }
 };
 
@@ -104,6 +109,7 @@ const editProduct = async (
   } finally {
     setTimeout(() => {
       window.location.reload();
+      alertRemoveProduct.classList.remove("active");
       alertSuccessEditProduct.classList.remove("active");
     }, 2600);
   }
@@ -172,21 +178,18 @@ async function showAllProducts() {
 
       card.querySelector(".btn-remove").addEventListener("click", () => {
         alertRemoveProduct.classList.add("active");
-        
-       
+
         btnRemoveProduct.addEventListener("click", () => {
           alertSuccessRemoveProduct.classList.add("active");
           removeProduct(btnRemove.dataset.id);
-        })
+        });
         // removeProduct(btnRemove.dataset.id);
       });
-
 
       card.querySelector(".btn-edit").addEventListener("click", () => {
         editProductModal.classList.toggle("active");
         canvasOverlayBlurEdit.classList.toggle("active");
         drawDataForm(btnEdit.dataset.id);
- 
       });
 
       fragment.appendChild(card);
@@ -203,3 +206,43 @@ async function showAllProducts() {
 
 showAllProducts();
 
+// creamos una funcion para buscar un producto por su nombre y mostrarlo en la pagina
+
+const searchInput = document.getElementById("search"); //obtenemos el elemento de la barra de busqueda
+const searchButton = document.getElementById("search-button"); //obtenemos el elemento del boton de busqueda
+searchInput.addEventListener("keyup", async (e) => {
+
+  console.log(e.target.value); //obtenemos el valor de la barra de busqueda
+  const search = e.target.value; //obtenemos el valor de la barra de busqueda
+  const products = await getAllProducts(); //obtenemos todos los productos
+  const filteredProducts = products.filter((product) => {
+    //creamos una funcion para filtrar los productos
+    return product.name.toLowerCase().includes(search.toLowerCase()); //devuelve true si el nombre del producto contiene el valor de la barra de busqueda
+  });
+
+  localStorage.setItem("search", search); //guardamos la busqueda en localStorage
+
+  if (filteredProducts.length > 0) {
+    //si el numero de productos filtrados es mayor a 0
+    const fragment = document.createDocumentFragment(); //creamos un fragmento
+    filteredProducts.forEach((product) => {
+      //iteramos sobre los productos filtrados
+      const card = cardTemplate.cloneNode(true); //clonamos el template de la tarjeta
+      card.querySelector(".products__template-subtitle").textContent =
+        product.name; //obtenemos el nombre del producto y lo mostramos en el template
+      card.querySelector(".products__template-price").textContent =
+        product.price; //obtenemos el precio del producto y lo mostramos en el template
+      card.querySelector("img").src = product.imageUrl; //obtenemos la imagen del producto y la mostramos en el template
+      card.querySelector(".btn__product-card").dataset.id = product.id; //obtenemos el id del producto y lo mostramos en el template
+      card.querySelector(".btn-remove").dataset.id = product.id; //obtenemos el id del producto y lo mostramos en el template
+      card.querySelector(".btn-edit").dataset.id = product.id; //obtenemos el id del producto y lo mostramos en el template
+      fragment.appendChild(card); //agregamos el fragmento al contenedor de productos
+    });
+
+    allProductsContainer.innerHTML = ""; //limpiamos el contenedor de productos
+    allProductsContainer.appendChild(fragment); //agregamos el fragmento al contenedor de productos
+  } else {
+    //si el numero de productos filtrados es menor a 0
+    allProductsContainer.innerHTML = ""; //limpiamos el contenedor de productos
+  }
+});

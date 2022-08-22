@@ -182,6 +182,10 @@
     cursor: pointer;
     transition: all 0.3s ease-in-out;
   }
+
+  .product__description-content-add-btn:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  }
   
   .cart-description {
     margin-right: 12px;

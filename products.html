@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alura Geek | Todos Los Productos</title>
+    <title>Alura Geek | Productos</title>
 
     <!-- font -->
 
@@ -42,6 +42,7 @@
     <!-- styles -->
 
     <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/search-page.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/login.css" />
     <link rel="stylesheet" href="css/products.css" />
@@ -274,16 +275,14 @@
 
       <!-- All Products Area -->
       <section class="all-products">
-        <div class="all-produtcs__main-title">
-          <h2>Menu Administrador</h2>
-        </div>
+
         <div class="products-title">
-          <h2>Todos los Productos</h2>
+          <h2>Resultado de la busqueda</h2>
           <div class="products__btn-add-products">
             <h2>Agregar Producto</h2>
           </div>
         </div>
-        <div class="all-products-cards">
+        <div class="all-products-cards searched-products-cards">
           <template id="card__template">
             <div class="products__template-content-card">
               <img
@@ -476,7 +475,7 @@
     <!-- start script Area -->
     <script src="js/products-description.js"></script>
     <script type="module" src="js/login-validation.js"></script>
-    <!-- <script src="controllers/edit-products.js"></script> -->
+    <script src="js/login.js"></script>
     <script type="module" src="js/alerts.js"></script>
     <script src="controllers/all-products.js"></script>
     <script type="module" src="controllers/add-product.js"></script>

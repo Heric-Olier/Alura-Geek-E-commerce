@@ -64,3 +64,6 @@ navMenuItems.forEach((item) => {
     searchBar.classList.remove("active");
   });
 });
+
+
+

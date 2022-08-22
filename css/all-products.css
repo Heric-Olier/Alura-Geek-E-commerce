@@ -184,7 +184,7 @@ body {
   top: 0;
   z-index: 999;
   padding: 24px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.22s ease-in-out;
 }
 
 .alert__remove-product.active {

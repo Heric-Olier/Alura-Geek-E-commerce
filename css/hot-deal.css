@@ -136,5 +136,5 @@ body {
 }
 
 .btn-buy-now:hover {
-  background-color: #f76466;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
 }
