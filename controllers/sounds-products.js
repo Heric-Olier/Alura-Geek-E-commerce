@@ -25,7 +25,7 @@ const soundsCarousel = () => {
     nav: false,
     speed: 300,
     autoplayButtonOutput: false,
-    autoplayTimeout: 3000,
+    autoplayTimeout: 4000,
     autoplayButton: false,
     loop: true,
     mouseDrag: true,
