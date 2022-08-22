@@ -41,7 +41,7 @@ const login = async (email, password) => {
           window.location = "./all-products.html";
           loginLoadingArea.classList.remove("active");
         }, 1800);
-        
+
         btnUserContainer.classList.add("active");
         return true;
       } else {
@@ -96,5 +96,3 @@ const addUserIcon = () => {
   }
 };
 addUserIcon();
-
-// creamos una funcion para agergar el contenedor de los botonoes de editar y eliminar
