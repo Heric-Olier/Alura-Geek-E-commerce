@@ -246,3 +246,4 @@ searchInput.addEventListener("keyup", async (e) => {
     allProductsContainer.innerHTML = ""; //limpiamos el contenedor de productos
   }
 });
+
