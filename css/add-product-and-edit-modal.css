@@ -22,7 +22,7 @@ body {
 .add-product__area,
 .edit-product__area {
   padding: 40px 40px;
-  width: 28rem;
+  width: 30rem;
   height: 43rem;
   position: fixed;
   margin: 0 auto;
@@ -271,4 +271,59 @@ select {
 .error__message.active {
   display: block;
   opacity: 1;
+}
+
+.alert__success-add-product,
+.alert__success-edit-product {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  background-color: rgba(211, 211, 211, 0.486);
+  backdrop-filter: blur(2px);
+  position: absolute;
+  padding: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.alert__success-add-product.active,
+.alert__success-edit-product.active {
+  transform: scale(1);
+}
+
+.alert__success-add-product-content,
+.alert__success-edit-product-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 26rem;
+  height: 14rem;
+  background-color: var(--background-white);
+  border: 1px solid #dadada;
+  border-radius: 10px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.151);
+  transition: all 0.3s ease-in-out;
+}
+
+.fa-circle-check,
+.fa-circle-notch {
+  color: #f76466;
+  font-size: 2.5rem;
+  margin-bottom: 14px;
+}
+
+.alert__success-add-product-content p,
+.alert__success-edit-product-content p {
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #545454;
+  font-family: var(--font-poppins);
+  line-height: 30px;
+  margin-bottom: 10px;
 }

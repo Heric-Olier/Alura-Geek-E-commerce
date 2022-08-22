@@ -23,8 +23,9 @@ const joysticksCarousel = () => {
     autoplay: true,
     controls: false,
     nav: false,
+    speed: 300,
     autoplayButtonOutput: false,
-    autoplayTimeout: 5000,
+    autoplayTimeout: 3000,
     autoplayButton: false,
     loop: true,
     mouseDrag: true,
@@ -43,7 +44,6 @@ const joysticksCarousel = () => {
     },
   });
 };
-
 
 
 async function showJoysticksProducts() {

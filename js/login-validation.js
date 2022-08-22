@@ -45,6 +45,7 @@ const login = async (email, password) => {
         btnUserContainer.classList.add("active");
         return true;
       } else {
+        loginLoadingArea.classList.remove("active");
         showMessageError("Email o contraseña incorrectos");
         fieldEmail.focus();
         return false;
@@ -71,9 +72,9 @@ const validateLogin = () => {
 const loginForm = document.querySelector("form");
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  loginLoadingArea.classList.add("active");
   if (validateLogin()) {
     login(fieldEmail.value, fieldPassword.value);
+    loginLoadingArea.classList.add("active");
   }
 });
 

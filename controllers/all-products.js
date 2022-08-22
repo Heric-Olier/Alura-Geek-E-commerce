@@ -2,13 +2,12 @@ const allProductsContainer = document.querySelector(".all-products-cards"); //te
 const cardTemplate = document.querySelector("#card__template").content;
 const editProductModal = document.querySelector(".edit-product__area");
 const btnEdit = document.querySelectorAll(".btn-edit");
-const btnCloseEditProductsModal = document.querySelector(
-  ".btn__close-edit-product-area"
-);
-const canvasOverlayBlurEdit = document.querySelector(
-  ".canvas__overlay-blur-modal"
-);
+const btnCloseEditProductsModal = document.querySelector(".btn__close-edit-product-area");
+const canvasOverlayBlurEdit = document.querySelector(".canvas__overlay-blur-modal");
 const btnEditPut = document.getElementById("btn__edit-product");
+const alertSuccessEditProduct = document.querySelector(".alert__success-edit-product");
+
+
 
 let idProduct;
 
@@ -91,7 +90,8 @@ const editProduct = async (
   } finally {
     setTimeout(() => {
       window.location.reload();
-    }, 1000);
+      alertSuccessEditProduct.classList.remove("active");
+    }, 2600);
   }
 };
 
@@ -119,6 +119,7 @@ const drawDataForm = async (id) => {
 
 btnEditPut.addEventListener("click", (e) => {
   e.preventDefault();
+  alertSuccessEditProduct.classList.add("active");
   const form = document.querySelector("[data-form-edit]");
   const id = idProduct;
   const name = form.querySelector("[data-name-edit]").value;
@@ -139,7 +140,6 @@ async function showAllProducts() {
     const products = await getAllProducts();
 
     const fragment = document.createDocumentFragment();
-
 
     products.forEach(({ name, price, imageUrl, id }) => {
       const card = cardTemplate.cloneNode(true);
@@ -163,8 +163,7 @@ async function showAllProducts() {
         editProductModal.classList.toggle("active");
         canvasOverlayBlurEdit.classList.toggle("active");
         drawDataForm(btnEdit.dataset.id);
-        // editProduct( btnEdit.dataset.id, name, price, imageUrl, description, category);
-        // console.log(btnEdit.dataset.id);
+ 
       });
 
       fragment.appendChild(card);
