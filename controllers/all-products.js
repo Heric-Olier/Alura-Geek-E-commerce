@@ -6,6 +6,10 @@ const btnCloseEditProductsModal = document.querySelector(".btn__close-edit-produ
 const canvasOverlayBlurEdit = document.querySelector(".canvas__overlay-blur-modal");
 const btnEditPut = document.getElementById("btn__edit-product");
 const alertSuccessEditProduct = document.querySelector(".alert__success-edit-product");
+const alertRemoveProduct = document.querySelector(".alert__remove-product");
+const btnRemoveProduct = document.querySelector(".btn-remove-product");
+const btnCancelRemoveProduct = document.querySelector(".btn-cancel-remove-product");
+const alertSuccessRemoveProduct = document.querySelector(".alert__success-remove-product");
 
 
 
@@ -20,6 +24,12 @@ canvasOverlayBlurEdit.addEventListener("click", () => {
   editProductModal.classList.remove("active");
   canvasOverlayBlurEdit.classList.remove("active");
 });
+
+btnCancelRemoveProduct.addEventListener("click", () => {
+  alertRemoveProduct.classList.remove("active");
+});
+
+
 
 //creamos una funcion para traer los datos de todos los articulos desde la api json
 
@@ -50,7 +60,11 @@ const removeProduct = async (id) => {
   } catch (error) {
     console.log(error);
   } finally {
-    window.location.reload();
+    setTimeout(() => {
+      window.location.reload();
+      alertSuccessRemoveProduct.classList.remove("active");
+    } , 2600);
+
   }
 };
 
@@ -157,8 +171,17 @@ async function showAllProducts() {
       const btnEdit = card.querySelector(".btn-edit");
 
       card.querySelector(".btn-remove").addEventListener("click", () => {
-        removeProduct(btnRemove.dataset.id);
+        alertRemoveProduct.classList.add("active");
+        
+       
+        btnRemoveProduct.addEventListener("click", () => {
+          alertSuccessRemoveProduct.classList.add("active");
+          removeProduct(btnRemove.dataset.id);
+        })
+        // removeProduct(btnRemove.dataset.id);
       });
+
+
       card.querySelector(".btn-edit").addEventListener("click", () => {
         editProductModal.classList.toggle("active");
         canvasOverlayBlurEdit.classList.toggle("active");
@@ -179,3 +202,4 @@ async function showAllProducts() {
 }
 
 showAllProducts();
+
