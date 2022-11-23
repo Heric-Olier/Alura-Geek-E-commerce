@@ -25,5 +25,15 @@ contraseña: admin123
 
 ![](https://i.imgur.com/JwLVrNI.jpg)
 
+# Agregar productos
+![](https://i.imgur.com/b4KjQXg.png)
+
+# Editar productos
+![](https://i.imgur.com/Qa3WOPw.png)
+
+# Eliminar productos
+![](https://i.imgur.com/417XCTA.png)
+
+
 ## [ir a la pagina](https://alura-geek-page.netlify.app/index.html) 👈
 
